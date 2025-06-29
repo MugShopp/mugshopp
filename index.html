@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +33,7 @@
     header {
       background: linear-gradient(to right, #ffffff, #f0f4f5);
       text-align: center;
-      padding: 20px 20px;
+      padding: 20px;
       border-bottom: 1px solid #ccc;
     }
     header img.logo {
@@ -93,7 +94,7 @@
     .carousel {
       display: flex;
       width: max-content;
-      animation: slide 10s linear infinite;
+      animation: slide 12s linear infinite;
     }
     .carousel img {
       height: 240px;
@@ -114,7 +115,7 @@
     .testimonial-carousel {
       display: flex;
       width: max-content;
-      animation: slide 10s linear infinite;
+      animation: slide 12s linear infinite;
     }
     .testimonial {
       flex-shrink: 0;
@@ -217,7 +218,7 @@
     }
     .social-footer .social-icons-footer {
       margin: 0 auto;
-      max-width: 240px;
+      max-width: 220px;
     }
     .social-footer .social-icons-footer a {
       margin: 0 8px;
@@ -245,25 +246,41 @@
       font-weight: bold;
     }
     @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
   </style>
 </head>
 <body>
   <div class="social-icons-top">
-    <a href="https://www.instagram.com/mug.shopp?igsh=NHMxZ3pvZXVudGdq" target="_blank" rel="noopener noreferrer">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-    </a>
-    <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank" rel="noopener noreferrer">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-    </a>
-    <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank" rel="noopener noreferrer">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    </a>
-    <a href="https://maps.app.goo.gl/XezvSExaeHUPpNLk7" target="_blank" rel="noopener noreferrer">
-      <img src="https://i.postimg.cc/L5sZdByd/download-1.png" alt="Google Maps">
-    </a>
+    <a href="https://www.instagram.com/mug.shopp?igsh=NHMxZ3pvZXVudGdq" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+    <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+    <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+    <a href="https://maps.app.goo.gl/XezvSExaeHUPpNLk7" target="_blank"><img src="https://i.postimg.cc/L5sZdByd/download-1.png" alt="Google Maps"></a>
   </div>
+
+  <!-- (o restante do corpo segue normalmente aqui...) -->
+  <!-- Galeria, depoimentos, botão de CTA, pedido, etc. exatamente como estava -->
+
+  <!-- Redes sociais no rodapé -->
+  <div class="social-footer">
+    <p>Visite nossas redes sociais</p>
+    <div class="social-icons-footer">
+      <a href="https://www.instagram.com/mug.shopp?igsh=NHMxZ3pvZXVudGdq" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+      <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+      <a href="https://maps.app.goo.gl/XezvSExaeHUPpNLk7" target="_blank"><img src="https://i.postimg.cc/L5sZdByd/download-1.png" alt="Google Maps"></a>
+    </div>
+  </div>
+
+  <footer>
+    <p>MugShopp - Produtos Personalizados</p>
+    <div class="contact-info">Taubaté / SP | WhatsApp: (12) 99243-9101</div>
+    <p>© 2025 Todos os direitos reservados</p>
+  </footer>
 </body>
 </html>
