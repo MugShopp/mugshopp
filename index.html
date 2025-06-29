@@ -5,84 +5,117 @@
   <title>Presentes Personalizados | MugShopp</title>
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(white, #f0f0f0);
-      color: #111;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(white, #f8f9fa);
+      color: #222;
       margin: 0;
       padding: 0;
     }
-    header, footer {
-      background-color: #0ABAB5;
-      color: white;
+    header {
+      background: linear-gradient(to right, #ffffff, #f0f4f5);
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
     }
-    h1, h2 {
-      color: #0ABAB5;
+    header img.logo {
+      width: 160px;
+      margin-bottom: 10px;
     }
-    .gridContainer {
-      max-width: 900px;
+    header h1 {
+      color: #111;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 16px;
+      color: #555;
+    }
+    .container {
+      max-width: 980px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 40px 20px;
     }
-    .product {
+    .intro {
       text-align: center;
-      margin: 40px 0;
+      margin-bottom: 40px;
     }
-    .product img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    .intro h2 {
+      color: #0ABAB5;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      color: #555;
+      font-size: 16px;
+    }
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 10px 0;
+    }
+    .gallery img {
+      height: 260px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
     }
     .cta {
       text-align: center;
-      margin: 40px 0;
+      margin: 50px 0 30px;
     }
     .cta a {
       background-color: #0ABAB5;
       color: white;
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
       text-decoration: none;
-      font-weight: bold;
+      display: inline-block;
+      transition: background-color 0.3s;
     }
     .cta a:hover {
       background-color: #088e8a;
     }
-    .logo {
-      width: 200px;
-      margin: 20px auto;
+    footer {
+      background-color: #f2f2f2;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      padding: 20px;
+    }
+    .contact-info {
+      margin-top: 10px;
+      font-size: 15px;
     }
   </style>
 </head>
 <body><header>
   <img class="logo" src="https://i.postimg.cc/7LWQCZjQ/Logo-Alta-Resolu-o-1.png" alt="Logo MugShopp">
-  <h1>Surpreenda com Presentes Personalizados</h1>
-  <p>Emocione quem você ama com canecas, almofadas, azulejos e muito mais!</p>
-</header><div class="gridContainer">
-  <section class="product">
-    <h2>Canecas Criativas</h2>
-    <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Caneca personalizada">
-  </section>  <section class="product">
-    <h2>Kits para Presentear</h2>
-    <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" alt="Kit presente personalizado">
-  </section>  <section class="product">
-    <h2>Detalhes que Encantam</h2>
-    <img src="https://i.postimg.cc/h4sjLZ8D/IMG-20240706-110105.jpg" alt="Detalhes personalizados">
-  </section>  <section class="product">
-    <h2>Presente com Emoção</h2>
-    <img src="https://i.postimg.cc/ZKD5g9DX/IMG-20240709-111136.jpg" alt="Presente com emoção">
-  </section>  <section class="product">
-    <h2>Momentos Eternizados</h2>
-    <img src="https://i.postimg.cc/Sx2xpyBR/IMG-20240903-190619.jpg" alt="Presente memorável">
+  <h1>Presentes que emocionam</h1>
+  <p>Transforme momentos em lembranças inesquecíveis com produtos personalizados.</p>
+</header><div class="container">
+  <section class="intro">
+    <h2>Especialistas em criar presentes únicos</h2>
+    <p>Desde canecas com frases especiais até kits completos para datas comemorativas, cada item da MugShopp é feito com carinho para surpreender quem você ama.</p>
+  </section>  <section class="gallery">
+    <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Produto 1">
+    <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" alt="Produto 2">
+    <img src="https://i.postimg.cc/h4sjLZ8D/IMG-20240706-110105.jpg" alt="Produto 3">
+    <img src="https://i.postimg.cc/ZKD5g9DX/IMG-20240709-111136.jpg" alt="Produto 4">
+    <img src="https://i.postimg.cc/Sx2xpyBR/IMG-20240903-190619.jpg" alt="Produto 5">
   </section>  <div class="cta">
-    <h2>Fale agora com a gente e faça seu pedido!</h2>
-    <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank">Quero Personalizar um Presente</a>
+    <h2>Peça o seu presente personalizado agora</h2>
+    <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank">Falar no WhatsApp</a>
   </div>
 </div><footer>
   <p>MugShopp - Produtos Personalizados com Amor</p>
+  <div class="contact-info">
+    Taubaté / SP | WhatsApp: (12) 99243-9101
+  </div>
   <p>© 2025 Todos os direitos reservados</p>
 </footer></body>
 </html>
