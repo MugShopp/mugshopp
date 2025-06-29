@@ -21,8 +21,7 @@
       margin-bottom: 10px;
     }
     header h1 {
-      color: #111;
-      font-size: 26px;
+      font-size: 20px;
       margin-bottom: 10px;
       white-space: nowrap;
     }
@@ -64,7 +63,7 @@
     .carousel {
       display: flex;
       width: max-content;
-      animation: slide 12s infinite linear;
+      animation: slide 24s infinite linear;
     }
     .carousel img {
       height: 240px;
@@ -75,6 +74,8 @@
     }
     @keyframes slide {
       0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
       100% { transform: translateX(-50%); }
     }
     .cta {
