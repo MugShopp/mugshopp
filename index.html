@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -98,25 +97,23 @@
       flex-shrink: 0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    /* Ajuste nos depoimentos para evitar corte */
     .testimonial-carousel-wrapper {
-      position: relative;
-      overflow-x: hidden;
-      overflow-y: visible;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 0 auto 50px;
       max-width: 960px;
-      border-bottom: 1px solid #ddd;
       padding-bottom: 40px;
     }
     .testimonial-carousel {
       display: flex;
-      width: max-content;
-      animation: slide 16s linear infinite;
+      gap: 16px;
+      scroll-snap-type: x mandatory;
+      padding: 0 10px;
     }
     .testimonial {
-      flex-shrink: 0;
+      flex: 0 0 auto;
       width: 280px;
-      margin-right: 16px;
+      scroll-snap-align: start;
       text-align: center;
       box-sizing: border-box;
       padding: 0 10px;
@@ -133,35 +130,21 @@
       color: #555;
       margin: 4px 10px;
     }
-    .about {
-      margin-bottom: 40px;
+    .about, .cta, .pedido, .feedback-link {
       border-bottom: 1px solid #ddd;
       padding-bottom: 40px;
-    }
-    .about h2 {
-      color: #0ABAB5;
-      font-size: 18px;
+      margin-bottom: 40px;
       text-align: center;
-      white-space: nowrap;
-      margin-bottom: 16px;
     }
-    .about p {
+    .about h2, .cta h2, .pedido h2 {
+      font-size: 18px;
+      color: #0ABAB5;
+      margin-bottom: 20px;
+      white-space: nowrap;
+    }
+    .about p, .pedido ul, .feedback-link p {
       font-size: 13px;
       color: #555;
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    .cta {
-      text-align: center;
-      margin: 40px 0 20px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 40px;
-    }
-    .cta h2 {
-      font-size: 18px;
-      white-space: nowrap;
-      margin-bottom: 20px;
     }
     .cta a {
       background-color: #0ABAB5;
@@ -176,50 +159,24 @@
     .cta a:hover {
       background-color: #088e8a;
     }
-    .pedido {
-      max-width: 980px;
-      margin: 0 auto 40px;
-      padding: 0 20px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 40px;
-    }
-    .pedido h2 {
-      color: #0ABAB5;
-      font-size: 18px;
-      text-align: center;
-      white-space: nowrap;
-      margin-bottom: 20px;
-    }
     .pedido ul {
       list-style: none;
       padding-left: 0;
       max-width: 700px;
       margin: 0 auto;
-      font-size: 13px;
-      color: #555;
+      text-align: left;
     }
     .pedido ul li {
       margin-bottom: 8px;
     }
-    .feedback-link {
-      text-align: center;
-      margin: 30px 0;
-    }
     .feedback-link img {
       width: 120px;
-      max-width: 100%;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
     .feedback-link img:hover {
       transform: scale(1.05);
-    }
-    .feedback-link p {
-      font-size: 14px;
-      color: #0ABAB5;
-      margin-top: 8px;
-      font-weight: bold;
     }
     .social-footer {
       text-align: center;
@@ -232,21 +189,13 @@
       margin-bottom: 10px;
       color: #444;
     }
-    .social-footer .social-icons-footer {
-      margin: 0 auto;
-      max-width: 180px;
-    }
-    .social-footer .social-icons-footer a {
-      margin: 0 8px;
-      display: inline-block;
-    }
-    .social-footer .social-icons-footer img {
+    .social-footer .social-icons-footer a img {
       width: 24px;
       height: 24px;
       opacity: 0.8;
       transition: opacity 0.3s;
     }
-    .social-footer .social-icons-footer img:hover {
+    .social-footer .social-icons-footer a img:hover {
       opacity: 1;
     }
     footer {
@@ -256,39 +205,24 @@
       color: #555;
       padding: 20px;
     }
-    .contact-info {
-      margin-top: 10px;
-      font-size: 13px;
-      font-weight: bold;
-    }
     @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
   </style>
 </head>
 <body>
-
-  <!-- TOPO SOCIAL -->
   <div class="social-icons-top">
     <a href="https://www.instagram.com/mug.shopp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
     <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
     <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
   </div>
-
-  <!-- CABEÇALHO -->
   <header>
     <img class="logo" src="https://i.postimg.cc/SRGRvDzh/file-00000000b69061f8ae80cb7ce110477f-1-1.png" alt="Logo MugShopp" />
     <h1>Presentes que emocionam</h1>
     <p>Transforme momentos especiais em lembranças inesquecíveis com nossos produtos.</p>
   </header>
-
   <div class="container">
-    <!-- INTRO -->
     <section class="intro">
       <h2>Presentes únicos e especiais</h2>
       <p>
@@ -302,8 +236,6 @@
         E muito mais...
       </p>
     </section>
-
-    <!-- CARROSSEL PRODUTOS -->
     <div class="carousel-wrapper">
       <div class="carousel">
         <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Produto 1" />
@@ -318,20 +250,14 @@
         <img src="https://i.postimg.cc/25M3g1c0/IMG-20250629-082722.png" alt="Produto 10" />
       </div>
     </div>
-
-    <!-- SOBRE -->
     <section class="about">
       <h2>Sobre a MugShopp</h2>
       <p>A MugShopp nasceu do desejo de criar presentes que contam histórias. Começamos humildemente em 2021 e, com muito carinho, hoje temos a satisfação de atender clientes da nossa região, de todo o Brasil e também do exterior.</p>
     </section>
-
-    <!-- WHATSAPP -->
     <div class="cta">
       <h2>Fale com a gente no WhatsApp</h2>
       <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank">Falar agora</a>
     </div>
-
-    <!-- DEPOIMENTOS -->
     <div class="testimonial-carousel-wrapper" aria-label="Depoimentos dos clientes">
       <div class="testimonial-carousel">
         <div class="testimonial">
@@ -351,8 +277,6 @@
         </div>
       </div>
     </div>
-
-    <!-- COMO PEDIR -->
     <section class="pedido">
       <h2>Como fazer seu pedido</h2>
       <ul>
@@ -365,26 +289,23 @@
         <li>✓ Retire ou receba em casa</li>
       </ul>
     </section>
-
-    <!-- AVALIAÇÃO -->
     <div class="feedback-link">
       <a href="https://g.page/r/CS9Wjb4xq5aJEBE/review" target="_blank" rel="noopener noreferrer">
         <img src="https://i.postimg.cc/V6tZJkhv/five-golden-stars-client-excellent-evaluation-after-use-product-service-concept-by-3d-render.png" alt="Avaliação Google" />
       </a>
       <p>Avalie-nos no Google.</p>
     </div>
-
   </div>
-
-  <!-- RODAPÉ SOCIAL -->
   <div class="social-footer">
     <p>Visite nossas redes sociais</p>
     <div class="social-icons-footer">
-      <a href="https://www.instagram.com/mug.shopp" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
-      <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
-      <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
+      <a href="https://www.instagram.com/mug.shopp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+      <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
     </div>
   </div>
-
+  <footer>
+    &copy; 2025 MugShopp - Todos os direitos reservados.
+  </footer>
 </body>
 </html>
