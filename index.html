@@ -22,13 +22,15 @@
     }
     header h1 {
       color: #111;
-      font-size: 28px;
+      font-size: 26px;
       margin-bottom: 10px;
       white-space: nowrap;
     }
     header p {
-      font-size: 16px;
+      font-size: 15px;
       color: #555;
+      max-width: 700px;
+      margin: 0 auto;
     }
     .container {
       max-width: 980px;
@@ -41,18 +43,20 @@
     }
     .intro h2 {
       color: #0ABAB5;
-      font-size: 24px;
+      font-size: 22px;
       margin-bottom: 10px;
       white-space: nowrap;
     }
     .intro p {
       color: #555;
-      font-size: 16px;
+      font-size: 15px;
+      max-width: 700px;
+      margin: 0 auto;
     }
     .carousel-wrapper {
       position: relative;
       overflow: hidden;
-      height: 280px;
+      height: 260px;
       margin: 0 auto 50px;
     }
     .carousel {
@@ -60,7 +64,7 @@
       animation: slide 25s infinite linear;
     }
     .carousel img {
-      height: 260px;
+      height: 240px;
       margin-right: 16px;
       border-radius: 10px;
       flex-shrink: 0;
@@ -72,16 +76,18 @@
     }
     .cta {
       text-align: center;
-      margin: 50px 0 30px;
+      margin: 40px 0 20px;
     }
     .cta h2 {
+      font-size: 20px;
       white-space: nowrap;
+      margin-bottom: 20px;
     }
     .cta a {
       background-color: #0ABAB5;
       color: white;
-      padding: 12px 24px;
-      font-size: 16px;
+      padding: 10px 22px;
+      font-size: 15px;
       border-radius: 6px;
       text-decoration: none;
       display: inline-block;
@@ -89,6 +95,29 @@
     }
     .cta a:hover {
       background-color: #088e8a;
+    }
+    .separator {
+      width: 60px;
+      height: 2px;
+      background-color: #ccc;
+      margin: 30px auto;
+    }
+    .social-icons {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .social-icons img {
+      width: 28px;
+      height: 28px;
+      opacity: 0.85;
+      transition: opacity 0.3s;
+    }
+    .social-icons img:hover {
+      opacity: 1;
     }
     footer {
       background-color: #f2f2f2;
@@ -106,11 +135,11 @@
 <body><header>
   <img class="logo" src="https://i.postimg.cc/SRGRvDzh/file-00000000b69061f8ae80cb7ce110477f-1-1.png" alt="Logo MugShopp">
   <h1>Presentes que emocionam</h1>
-  <p>Transforme momentos em lembranças inesquecíveis com produtos personalizados.</p>
+  <p>Transforme momentos especiais em lembranças inesquecíveis com nossos produtos personalizados feitos sob medida para cada história.</p>
 </header><div class="container">
   <section class="intro">
     <h2>Presentes únicos e especiais</h2>
-    <p>Desde canecas com frases especiais até kits completos para datas comemorativas, cada item da MugShopp é feito com carinho para surpreender quem você ama.</p>
+    <p>Canecas criativas, almofadas encantadoras, kits personalizados e muito mais. Cada peça da MugShopp é criada com atenção aos detalhes e carinho, para surpreender e emocionar.</p>
   </section>  <div class="carousel-wrapper">
     <div class="carousel">
       <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Produto 1">
@@ -118,12 +147,22 @@
       <img src="https://i.postimg.cc/h4sjLZ8D/IMG-20240706-110105.jpg" alt="Produto 3">
       <img src="https://i.postimg.cc/ZKD5g9DX/IMG-20240709-111136.jpg" alt="Produto 4">
       <img src="https://i.postimg.cc/Sx2xpyBR/IMG-20240903-190619.jpg" alt="Produto 5">
-      <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Produto 1">
-      <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" alt="Produto 2">
+      <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Produto 1 repetido">
+      <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" alt="Produto 2 repetido">
     </div>
   </div>  <div class="cta">
     <h2>Fale com a gente no WhatsApp</h2>
     <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank">Falar agora</a>
+  </div>  <div class="separator"></div>  <div class="social-icons">
+    <a href="https://www.instagram.com/mug.shopp?igsh=NHMxZ3pvZXVudGdq" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+    <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
   </div>
 </div><footer>
   <p>MugShopp - Produtos Personalizados</p>
