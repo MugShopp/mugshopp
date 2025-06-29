@@ -47,21 +47,26 @@
       color: #555;
       font-size: 16px;
     }
-    .gallery {
-      display: flex;
-      overflow-x: auto;
-      gap: 16px;
-      padding: 10px 0;
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 280px;
+      margin: 0 auto 50px;
     }
-    .gallery img {
+    .carousel {
+      display: flex;
+      animation: slide 25s infinite linear;
+    }
+    .carousel img {
       height: 260px;
+      margin-right: 16px;
       border-radius: 10px;
       flex-shrink: 0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
     }
-    .gallery img:hover {
-      transform: scale(1.03);
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
     .cta {
       text-align: center;
@@ -94,20 +99,25 @@
   </style>
 </head>
 <body><header>
-  <img class="logo" src="https://i.postimg.cc/7LWQCZjQ/Logo-Alta-Resolu-o-1.png" alt="Logo MugShopp">
+  <img class="logo" src="https://i.postimg.cc/SRGRvDzh/file-00000000b69061f8ae80cb7ce110477f-1-1.png" alt="Logo MugShopp">
   <h1>Presentes que emocionam</h1>
   <p>Transforme momentos em lembranças inesquecíveis com produtos personalizados.</p>
 </header><div class="container">
   <section class="intro">
     <h2>Especialistas em criar presentes únicos</h2>
     <p>Desde canecas com frases especiais até kits completos para datas comemorativas, cada item da MugShopp é feito com carinho para surpreender quem você ama.</p>
-  </section>  <section class="gallery">
-    <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Produto 1">
-    <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" alt="Produto 2">
-    <img src="https://i.postimg.cc/h4sjLZ8D/IMG-20240706-110105.jpg" alt="Produto 3">
-    <img src="https://i.postimg.cc/ZKD5g9DX/IMG-20240709-111136.jpg" alt="Produto 4">
-    <img src="https://i.postimg.cc/Sx2xpyBR/IMG-20240903-190619.jpg" alt="Produto 5">
-  </section>  <div class="cta">
+  </section>  <div class="carousel-wrapper">
+    <div class="carousel">
+      <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Produto 1">
+      <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" alt="Produto 2">
+      <img src="https://i.postimg.cc/h4sjLZ8D/IMG-20240706-110105.jpg" alt="Produto 3">
+      <img src="https://i.postimg.cc/ZKD5g9DX/IMG-20240709-111136.jpg" alt="Produto 4">
+      <img src="https://i.postimg.cc/Sx2xpyBR/IMG-20240903-190619.jpg" alt="Produto 5">
+      <!-- repetição para looping visual suave -->
+      <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Produto 1">
+      <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" alt="Produto 2">
+    </div>
+  </div>  <div class="cta">
     <h2>Peça o seu presente personalizado agora</h2>
     <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank">Falar no WhatsApp</a>
   </div>
