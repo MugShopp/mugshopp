@@ -98,23 +98,15 @@
       flex-shrink: 0;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .testimonial-carousel-wrapper {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      margin: 0 auto 50px;
-      max-width: 960px;
-      padding-bottom: 40px;
-    }
-    .testimonial-carousel {
+    .testimonials-grid {
       display: flex;
+      flex-wrap: wrap;
       gap: 16px;
-      scroll-snap-type: x mandatory;
-      padding: 0 10px;
+      justify-content: center;
+      margin-bottom: 40px;
     }
     .testimonial {
-      flex: 0 0 auto;
       width: 280px;
-      scroll-snap-align: start;
       text-align: center;
       box-sizing: border-box;
       padding: 0 10px;
@@ -265,38 +257,36 @@
       <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank">Falar agora</a>
     </div>
 
-    <div class="testimonial-carousel-wrapper" aria-label="Depoimentos dos clientes">
-      <div class="testimonial-carousel">
-        <div class="testimonial">
-          <img src="https://i.postimg.cc/vB6jvZNR/FB-IMG-1751198268251.jpg" alt="Foto de Nádia" />
-          <p><strong>Nádia Ikeguchi</strong><br />Psicóloga</p>
-          <p>"Sempre compro produtos da MugShopp para a família, amigos e pacientes..."</p>
-        </div>
-        <div class="testimonial">
-          <img src="https://i.postimg.cc/PJs7VngC/FB-IMG-1751198295099.jpg" alt="Foto de Rita" />
-          <p><strong>Rita Mendes</strong><br />Técnica em Enfermagem</p>
-          <p>"Os presentes da MugShopp são além de bonitos, surpreendentes e super originais..."</p>
-        </div>
-        <div class="testimonial">
-          <img src="https://i.postimg.cc/qBKVsjPt/IMG-20250629-090103.jpg" alt="Foto de Jonas" />
-          <p><strong>Jonas Andrade</strong><br />Editor Fotográfico</p>
-          <p>"Eu gosto de presentear a família e os amigos com os produtos da MugShopp..."</p>
-        </div>
-        <div class="testimonial">
-          <img src="https://i.postimg.cc/fT9Rm3Ff/fotor-1751259087445.jpg" alt="Foto de Rosana" />
-          <p><strong>Rosana Lopes</strong><br />Auxiliar Contábil</p>
-          <p>"Já fiz diversos produtos com a MugShopp tanto para adultos como para crianças..."</p>
-        </div>
-        <div class="testimonial">
-          <img src="https://i.postimg.cc/fTm0Zgws/fotor-1751259045766.jpg" alt="Foto de Jorge" />
-          <p><strong>Jorge Pereira</strong><br />Vendedor</p>
-          <p>"Tenho dificuldade de escolher presentes, mas com a Inteligência Artificial da MugShopp..."</p>
-        </div>
-        <div class="testimonial">
-          <img src="https://i.postimg.cc/ZnrKk26D/FB-IMG-1751258761491.jpg" alt="Foto de Elidia" />
-          <p><strong>Elidia de Jesus</strong><br />Atleta</p>
-          <p>"Apaixonada que sou pela corrida, sempre presenteio meus amigos atletas com produtos personalizados..."</p>
-        </div>
+    <div class="testimonials-grid" aria-label="Depoimentos dos clientes">
+      <div class="testimonial">
+        <img src="https://i.postimg.cc/vB6jvZNR/FB-IMG-1751198268251.jpg" alt="Foto de Nádia" />
+        <p><strong>Nádia Ikeguchi</strong><br />Psicóloga</p>
+        <p>"Sempre compro produtos da MugShopp para a família, amigos e pacientes. Os presentes são lindos, personalizados com muito carinho e conseguem transmitir exatamente as mensagens de afeto e gratidão que quero passar. Já recebi vários elogios e retorno emocionado de quem ganhou. Recomendo muito para quem quer surpreender de verdade."</p>
+      </div>
+      <div class="testimonial">
+        <img src="https://i.postimg.cc/PJs7VngC/FB-IMG-1751198295099.jpg" alt="Foto de Rita" />
+        <p><strong>Rita Mendes</strong><br />Técnica em Enfermagem</p>
+        <p>"Os presentes da MugShopp são além de bonitos, surpreendentes e super originais. O diferencial é que eles incluem QR Codes que mostram vídeos, músicas ou até joguinhos de perguntas, o que torna a experiência muito mais especial e interativa. Produtos muito bem feitos, elegantes e resistentes. Adoro presentear com MugShopp!"</p>
+      </div>
+      <div class="testimonial">
+        <img src="https://i.postimg.cc/qBKVsjPt/IMG-20250629-090103.jpg" alt="Foto de Jonas" />
+        <p><strong>Jonas Andrade</strong><br />Editor Fotográfico</p>
+        <p>"Eu gosto de presentear a família e os amigos com os produtos da MugShopp porque sei que além de lindos, carregam uma história e um toque pessoal que faz toda a diferença. A qualidade é excelente, o acabamento impecável, e o atendimento é super atencioso. Sempre recomendo para quem quer algo especial e memorável."</p>
+      </div>
+      <div class="testimonial">
+        <img src="https://i.postimg.cc/fT9Rm3Ff/fotor-1751259087445.jpg" alt="Foto de Rosana" />
+        <p><strong>Rosana Lopes</strong><br />Auxiliar Contábil</p>
+        <p>"Já fiz diversos produtos com a MugShopp tanto para adultos como para crianças. Sempre fiquei satisfeita com o resultado, preço e qualidade."</p>
+      </div>
+      <div class="testimonial">
+        <img src="https://i.postimg.cc/fTm0Zgws/fotor-1751259045766.jpg" alt="Foto de Jorge" />
+        <p><strong>Jorge Pereira</strong><br />Vendedor</p>
+        <p>"Tenho dificuldade de escolher presentes, mas com a Inteligência Artificial que me atendeu em um final de semana que procurei a MugShopp, consegui uma sugestão ótima que agradou muito. Valeu MugShopp!"</p>
+      </div>
+      <div class="testimonial">
+        <img src="https://i.postimg.cc/ZnrKk26D/FB-IMG-1751258761491.jpg" alt="Foto de Elidia" />
+        <p><strong>Elidia de Jesus</strong><br />Atleta</p>
+        <p>"Apaixonada que sou pela corrida, sempre presenteio meus amigos atletas com produtos personalizados com esse tema. A MugShopp faz a personalização de produtos com seu tema preferido."</p>
       </div>
     </div>
 
