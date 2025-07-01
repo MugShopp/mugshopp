@@ -54,7 +54,7 @@
       margin-bottom: 40px;
     }
     .intro p {
-      font-size: 15px;
+      font-size: 12px; /* Fonte menor */
       color: #555;
       max-width: 700px;
       margin: 0 auto;
@@ -70,34 +70,61 @@
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .carousel {
       display: flex;
-      overflow-x: auto;
       gap: 10px;
       scroll-snap-type: x mandatory;
+      justify-content: center;
+      margin-bottom: 12px;
+      width: 100%;
     }
     .carousel img {
+      width: 140px;  /* tamanho fixo e igual */
       height: 140px;
+      object-fit: cover;
       border-radius: 10px;
       scroll-snap-align: start;
       flex-shrink: 0;
     }
     .product h3 {
       font-size: 16px;
-      margin: 10px 0 4px;
+      margin: 10px 0 8px;
       color: #0ABAB5;
+      text-align: center; /* nome centralizado */
+      width: 100%;
     }
     .product p {
       font-size: 13px;
       margin: 0 0 10px;
       color: #444;
+      text-align: center; /* descrição centralizada */
+      width: 100%;
+    }
+    .product label,
+    .product select,
+    .product input[type="number"],
+    .product input[type="text"],
+    .product button {
+      width: 100%;
+      max-width: 300px;
+      font-size: 13px;
+    }
+    .product label {
+      margin-top: 10px;
+      display: block;
+      text-align: left;
+      font-weight: 600;
+      color: #222;
     }
     .product select,
     .product input[type="number"],
     .product input[type="text"] {
-      width: 100%;
       padding: 8px;
+      margin-top: 4px;
       margin-bottom: 8px;
       border: 1px solid #ccc;
       border-radius: 6px;
@@ -108,25 +135,40 @@
       color: white;
       border: none;
       padding: 10px;
-      width: 100%;
       font-size: 14px;
       border-radius: 6px;
       cursor: pointer;
       margin-top: 8px;
+      transition: background-color 0.3s ease;
     }
     .product button:hover {
       background-color: #088e8a;
     }
     .resumo {
-      background: #f1f1f1;
+      background: #f9f9f9;
       padding: 10px;
       border-radius: 8px;
-      margin-top: 10px;
+      margin-top: 12px;
       font-size: 13px;
+      color: #555;
+      width: 100%;
+      max-width: 300px;
+      text-align: left;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: inset 0 0 5px #ddd;
     }
     .whatsapp-button {
       background-color: #25D366;
       margin-top: 8px;
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
     .whatsapp-button:hover {
       background-color: #1ebe5b;
@@ -149,7 +191,7 @@
       <p>Veja abaixo algumas sugestões de produtos! Temos muito mais no nosso catálogo do WhatsApp. Todos podem ser personalizados com fotos ou temas prontos. Escolha o que quiser, insira seu CEP, e faça seu pedido com um clique!</p>
     </section>
     <div class="product-grid">
-<!-- Produto: Azulejo -->
+      <!-- Produto: Azulejo -->
       <div class="product" id="produto-azulejo">
         <h3>Azulejo 20x20 cm</h3>
         <div class="carousel" tabindex="0" aria-label="Carrossel de imagens do Azulejo">
@@ -168,6 +210,7 @@
         <input type="text" id="cep-azulejo" placeholder="Ex: 12071600" maxlength="8" />
         <button onclick="calcularFrete('azulejo')">Calcular Frete</button>
         <div class="resumo" id="resumo-azulejo" style="display:none;"></div>
+        <button class="whatsapp-button" id="whatsapp-azulejo" style="display:none;">Pedir pelo WhatsApp</button>
       </div>
 
       <!-- Produto: Placa MDF -->
@@ -189,8 +232,10 @@
         <input type="text" id="cep-placa" placeholder="Ex: 12071600" maxlength="8" />
         <button onclick="calcularFrete('placa')">Calcular Frete</button>
         <div class="resumo" id="resumo-placa" style="display:none;"></div>
+        <button class="whatsapp-button" id="whatsapp-placa" style="display:none;">Pedir pelo WhatsApp</button>
       </div>
-<!-- Produto: Quebra-Cabeça 12 peças -->
+
+      <!-- Produto: Quebra-Cabeça 12 peças -->
       <div class="product" id="produto-quebra">
         <h3>Quebra-Cabeça MDF 12 peças</h3>
         <div class="carousel" tabindex="0" aria-label="Carrossel de imagens do Quebra-Cabeça">
@@ -209,6 +254,7 @@
         <input type="text" id="cep-quebra" placeholder="Ex: 12071600" maxlength="8" />
         <button onclick="calcularFrete('quebra')">Calcular Frete</button>
         <div class="resumo" id="resumo-quebra" style="display:none;"></div>
+        <button class="whatsapp-button" id="whatsapp-quebra" style="display:none;">Pedir pelo WhatsApp</button>
       </div>
 
       <!-- Produto: Almofadinha 20x20 -->
@@ -230,14 +276,10 @@
         <input type="text" id="cep-almofada" placeholder="Ex: 12071600" maxlength="8" />
         <button onclick="calcularFrete('almofada')">Calcular Frete</button>
         <div class="resumo" id="resumo-almofada" style="display:none;"></div>
+        <button class="whatsapp-button" id="whatsapp-almofada" style="display:none;">Pedir pelo WhatsApp</button>
       </div>
-
-      <!-- Resumo geral e botão WhatsApp -->
-      <div id="resumo-geral" style="margin-top: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; color: #444; display:none; border: 1px solid #ddd; padding: 15px; border-radius: 8px; background-color: #f9f9f9;">
-      </div>
-      <button id="botao-whatsapp" style="display:none; margin-top: 15px; background-color: #0ABAB5; color: white; border: none; padding: 12px 25px; border-radius: 8px; font-size: 15px; cursor: pointer;">
-        Pedir pelo WhatsApp
-      </button>
+    </div>
+  </div>
 
 <script>
   // Função para formatar preço em reais
@@ -245,7 +287,7 @@
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   }
 
-  // Tabela simulada de frete por produto e região (só exemplos)
+  // Tabela simulada de frete por produto e região (exemplo)
   const tabelaFrete = {
     azulejo: 15.00,
     placa: 12.00,
@@ -265,7 +307,6 @@
   const pedidos = {};
 
   function calcularFrete(produto) {
-    // pegar inputs do produto
     const modelo = document.getElementById(`modelo-${produto}`).value;
     const quantidade = parseInt(document.getElementById(`quantidade-${produto}`).value);
     const cep = document.getElementById(`cep-${produto}`).value.trim();
@@ -279,7 +320,6 @@
       return;
     }
 
-    // Calcular frete e total (simulação)
     const frete = tabelaFrete[produto];
     const valorProduto = precos[produto] * quantidade;
     const total = valorProduto + frete;
@@ -297,7 +337,6 @@
       <strong>Total: ${formatarPreco(total)}</strong>
     `;
 
-    // Guardar no objeto pedidos
     pedidos[produto] = {
       produto: produto.charAt(0).toUpperCase() + produto.slice(1),
       modelo: modelo === 'foto' ? 'Com foto' : 'Com tema',
@@ -307,47 +346,26 @@
       total
     };
 
-    atualizarResumoGeral();
+    // Mostrar botão WhatsApp para este produto
+    document.getElementById(`whatsapp-${produto}`).style.display = 'inline-block';
   }
 
-  function atualizarResumoGeral() {
-    const resumoGeralDiv = document.getElementById('resumo-geral');
-    const botaoWhatsapp = document.getElementById('botao-whatsapp');
-
-    let textoResumo = '<h3>Resumo geral do pedido:</h3><ul style="list-style:none; padding-left:0;">';
-    let totalPedido = 0;
-    let temPedido = false;
-
-    for (const key in pedidos) {
-      if (pedidos[key].quantidade > 0) {
-        temPedido = true;
-        textoResumo += `<li>${pedidos[key].quantidade} x ${pedidos[key].produto} (${pedidos[key].modelo}) - ${formatarPreco(pedidos[key].total)}</li>`;
-        totalPedido += pedidos[key].total;
+  // Configurar evento dos botões WhatsApp
+  ['azulejo', 'placa', 'quebra', 'almofada'].forEach(produto => {
+    document.getElementById(`whatsapp-${produto}`).addEventListener('click', () => {
+      if (!pedidos[produto]) {
+        alert('Calcule o frete antes de pedir pelo WhatsApp.');
+        return;
       }
-    }
-    textoResumo += `</ul><p><strong>Total do pedido: ${formatarPreco(totalPedido)}</strong></p>`;
-
-    if (temPedido) {
-      resumoGeralDiv.style.display = 'block';
-      resumoGeralDiv.innerHTML = textoResumo;
-      botaoWhatsapp.style.display = 'inline-block';
-    } else {
-      resumoGeralDiv.style.display = 'none';
-      botaoWhatsapp.style.display = 'none';
-    }
-  }
-
-  document.getElementById('botao-whatsapp').addEventListener('click', () => {
-    let mensagem = 'Olá, gostaria de fazer esse pedido:%0A';
-    for (const key in pedidos) {
-      if (pedidos[key].quantidade > 0) {
-        mensagem += `- ${pedidos[key].quantidade} x ${pedidos[key].produto} (${pedidos[key].modelo}) - Total: ${formatarPreco(pedidos[key].total)}%0A`;
-      }
-    }
-    const urlWhatsapp = `https://wa.me/5512992439101?text=${mensagem}`; // Seu número WhatsApp com DDD aqui
-    window.open(urlWhatsapp, '_blank');
+      const p = pedidos[produto];
+      let mensagem = `Olá, gostaria de fazer o pedido:%0A`;
+      mensagem += `- ${p.quantidade} x ${p.produto} (${p.modelo})%0A`;
+      mensagem += `Total: ${formatarPreco(p.total)}`;
+      const urlWhatsapp = `https://wa.me/5512992439101?text=${mensagem}`;
+      window.open(urlWhatsapp, '_blank');
+    });
   });
 </script>
 
 </body>
-    </html>
+</html>
