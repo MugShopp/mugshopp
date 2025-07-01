@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja MugShopp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #008CBA;
+    }
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .produto {
+      width: 300px;
+      background: #fff;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+    .galeria {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .galeria img {
+      flex: 0 0 auto;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      scroll-snap-align: start;
+    }
+    .descricao {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+    }
+    select, input[type="number"], input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #008CBA;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .resumo {
+      margin-top: 10px;
+      background: #eef;
+      padding: 10px;
+      border-radius: 6px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Loja MugShopp</h1>
+  <div class="produtos"><div class="produto">
+  <h2>Azulejo 20x20 - R$ 35,00</h2>
+  <div class="galeria">
+    <img src="https://i.postimg.cc/kgz0yDXP/IMG-20250701-081641.png" alt="Azulejo com Foto">
+    <img src="https://i.postimg.cc/zB7Vy6VH/Modelo-03.png" alt="Azulejo com Tema">
+  </div>
+  <div class="descricao">Personalizável com foto ou temas. Cerâmica, resistente.</div>
+  <select class="modelo">
+    <option>Com Foto</option>
+    <option>Com Tema</option>
+  </select>
+  <input type="number" min="1" placeholder="Quantidade" class="quantidade">
+  <input type="text" placeholder="CEP" class="cep">
+  <button onclick="calcular(this, 'Azulejo 20x20', 35.00, 0.4)">Calcular frete</button>
+  <div class="resumo"></div>
+</div>
+
+<div class="produto">
+  <h2>Placa MDF A4 - R$ 17,00</h2>
+  <div class="galeria">
+    <img src="https://i.postimg.cc/VLzNPZ8H/13-20250701-070735-0012.jpg" alt="Placa com Foto">
+    <img src="https://i.postimg.cc/5224rHVH/1-20250701-070735-0000.jpg" alt="Placa com Tema">
+  </div>
+  <div class="descricao">MDF 3mm, personalizável com temas ou fotos. Envelope 25x35cm.</div>
+  <select class="modelo">
+    <option>Com Foto</option>
+    <option>Com Tema</option>
+  </select>
+  <input type="number" min="1" placeholder="Quantidade" class="quantidade">
+  <input type="text" placeholder="CEP" class="cep">
+  <button onclick="calcular(this, 'Placa MDF A4', 17.00, 0.3)">Calcular frete</button>
+  <div class="resumo"></div>
+</div>
+
+<div class="produto">
+  <h2>Quebra-Cabeça 12 peças - R$ 24,00</h2>
+  <div class="galeria">
+    <img src="https://i.postimg.cc/rssMz3w8/IMG-20250701-080723.jpg" alt="Quebra-Cabeça com Foto">
+    <img src="https://i.postimg.cc/RCWbg4yM/IMG-20250701-080712.png" alt="Quebra-Cabeça com Tema">
+  </div>
+  <div class="descricao">MDF 3mm, 12 peças. Personalizável com temas ou fotos.</div>
+  <select class="modelo">
+    <option>Com Foto</option>
+    <option>Com Tema</option>
+  </select>
+  <input type="number" min="1" placeholder="Quantidade" class="quantidade">
+  <input type="text" placeholder="CEP" class="cep">
+  <button onclick="calcular(this, 'Quebra-Cabeça 12 peças', 24.00, 0.35)">Calcular frete</button>
+  <div class="resumo"></div>
+</div>
+
+<div class="produto">
+  <h2>Almofadinha 20x20 - R$ 20,00</h2>
+  <div class="galeria">
+    <img src="https://i.postimg.cc/8PPdZHjL/IMG-20250701-082456.jpg" alt="Almofada com Foto">
+    <img src="https://i.postimg.cc/SKKGjGpy/IMG-20250701-082311.jpg" alt="Almofada com Tema">
+  </div>
+  <div class="descricao">Almofada com enchimento. Personalizável com fotos ou temas.</div>
+  <select class="modelo">
+    <option>Com Foto</option>
+    <option>Com Tema</option>
+  </select>
+  <input type="number" min="1" placeholder="Quantidade" class="quantidade">
+  <input type="text" placeholder="CEP" class="cep">
+  <button onclick="calcular(this, 'Almofadinha 20x20', 20.00, 0.25)">Calcular frete</button>
+  <div class="resumo"></div>
+</div>
+
+<div class="produto">
+  <h2>Caneca Cerâmica Comum - R$ 32,00</h2>
+  <div class="galeria">
+    <img src="https://i.postimg.cc/76rPLmpc/IMG-20250701-082745.jpg" alt="Caneca com Foto">
+    <img src="https://i.postimg.cc/bvtN8KFk/IMG-20250701-082801.jpg" alt="Caneca com Tema">
+  </div>
+  <div class="descricao">Caneca cerâmica branca, 325ml, personalizável com fotos ou temas.</div>
+  <select class="modelo">
+    <option>Com Foto</option>
+    <option>Com Tema</option>
+  </select>
+  <input type="number" min="1" placeholder="Quantidade" class="quantidade">
+  <input type="text" placeholder="CEP" class="cep">
+  <button onclick="calcular(this, 'Caneca Cerâmica Comum', 32.00, 0.35)">Calcular frete</button>
+  <div class="resumo"></div>
+</div>
+
+  </div><script>
+function calcular(botao, nomeProduto, precoUnit, pesoUnit) {
+  const produto = botao.closest('.produto');
+  const modelo = produto.querySelector('.modelo').value;
+  const quantidade = parseInt(produto.querySelector('.quantidade').value);
+  const cep = produto.querySelector('.cep').value.trim();
+
+  if (!quantidade || !cep) {
+    alert("Preencha a quantidade e o CEP");
+    return;
+  }
+
+  const pesoTotal = pesoUnit * quantidade;
+  let frete = 0;
+  if (pesoTotal <= 0.4) frete = 16.90;
+  else if (pesoTotal <= 0.8) frete = 19.90;
+  else if (pesoTotal <= 1.2) frete = 24.90;
+  else if (pesoTotal <= 1.6) frete = 27.90;
+  else if (pesoTotal <= 2.0) frete = 29.90;
+  else if (pesoTotal <= 2.5) frete = 33.90;
+  else frete = 39.90;
+
+  const total = (quantidade * precoUnit) + frete;
+
+  const resumoDiv = produto.querySelector('.resumo');
+  resumoDiv.style.display = 'block';
+  resumoDiv.innerHTML = `
+    <p><strong>Produto:</strong> ${nomeProduto}</p>
+    <p><strong>Modelo:</strong> ${modelo}</p>
+    <p><strong>Quantidade:</strong> ${quantidade}</p>
+    <p><strong>Frete estimado:</strong> R$ ${frete.toFixed(2)}</p>
+    <p><strong>Total:</strong> R$ ${total.toFixed(2)}</p>
+    <a href="https://wa.me/5512992439101?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20esse%20pedido%3A%20${encodeURIComponent(nomeProduto)}%20-%20${modelo}%20-%20${quantidade}un.%20CEP%3A%20${cep}%20Total%3A%20R$${total.toFixed(2)}" target="_blank">
+      <button style="background:#25D366">Pedir pelo WhatsApp</button>
+    </a>
+  `;
+}
+</script></body>
+  </html>
