@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MugShopp | Galeria</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0; padding: 0;
+      background: #fff;
+      color: #222;
+      font-size: 14px;
+    }
+    header {
+      background: linear-gradient(to right, #ffffff, #f0f4f5);
+      padding: 20px 20px;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+    }
+    header img.logo {
+      width: 160px;
+      margin-bottom: 10px;
+    }
+    nav {
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #0ABAB5;
+      font-weight: bold;
+      margin: 0 18px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    nav a:hover, nav a.active {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      color: #0ABAB5;
+      margin-bottom: 10px;
+    }
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 10px 0;
+      scroll-snap-type: x mandatory;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel img {
+      flex: 0 0 auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      scroll-snap-align: start;
+      transition: transform 0.3s ease;
+    }
+    .carousel img:hover {
+      transform: scale(1.05);
+    }
+    h2 {
+      font-size: 16px;
+      margin: 40px 0 12px;
+      color: #333;
+      text-align: left;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 60px 0 20px;
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      padding: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="https://i.postimg.cc/SRGRvDzh/file-00000000b69061f8ae80cb7ce110477f-1-1.png" alt="Logo MugShopp" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="galeria.html" class="active">Galeria</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Galeria de Produtos</h1>
+  <p class="intro">
+    Nesta galeria, você confere alguns dos produtos que já personalizamos com muito carinho.  
+    Trabalhamos com sublimação de alta qualidade para garantir cores vivas e acabamento impecável.  
+    Cada peça é única e feita especialmente para você.
+  </p>
+
+  <h2>Produtos Diversos</h2>
+  <div class="carousel">
+    <img src="https://i.postimg.cc/j5vFygkC/IMG-20230105-083329.jpg" alt="Produto 1" />
+    <img src="https://i.postimg.cc/NMQn9qDW/IMG-20230518-060102.jpg" alt="Produto 2" />
+    <img src="https://i.postimg.cc/d02XVt22/IMG-20250701-155535.jpg" alt="Produto 3" />
+    <img src="https://i.postimg.cc/ZKQXfQYd/IMG-20250701-155606.jpg" alt="Produto 4" />
+    <img src="https://i.postimg.cc/cJy2W8n1/IMG-20250701-155627.jpg" alt="Produto 5" />
+    <img src="https://i.postimg.cc/pXrgJvvv/IMG-20250701-155642.jpg" alt="Produto 6" />
+  </div>
+
+  <h2>Canecas, Almofadas e Azulejos</h2>
+  <div class="carousel">
+    <img src="https://i.postimg.cc/3xDVzZWb/IMG-20250701-155703.jpg" alt="Produto 7" />
+    <img src="https://i.postimg.cc/D0jR3jqR/IMG-20250701-155819.jpg" alt="Produto 8" />
+    <img src="https://i.postimg.cc/Y9xJbqjr/IMG-20250701-160033.jpg" alt="Produto 9" />
+    <img src="https://i.postimg.cc/bv1XSRh2/IMG-20250701-160147.jpg" alt="Produto 10" />
+    <img src="https://i.postimg.cc/8cPx3Qrh/IMG-20250701-160212.jpg" alt="Produto 11" />
+    <img src="https://i.postimg.cc/TwxzVWdN/IMG-20250701-160402.jpg" alt="Produto 12" />
+  </div>
+</div>
+
+<hr />
+
+<footer>
+  Todos os nossos produtos são personalizados por meio do processo de sublimação,  
+  que garante alta durabilidade, cores vivas e detalhes nítidos.  
+  Trabalhamos sob encomenda e os pedidos podem ser feitos diretamente pelo nosso WhatsApp.  
+  Estamos sempre prontos para criar algo especial com você.
+</footer>
+
+</body>
+</html>
