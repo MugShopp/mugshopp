@@ -13,60 +13,94 @@
       padding: 0;
       font-size: 10px;
     }
+
     nav {
-      background: #f0f4f5;
-      border-bottom: 1px solid #ccc;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
-      z-index: 9999;
+      z-index: 1000;
     }
+
     nav ul {
       list-style: none;
-      margin: 0;
-      padding: 10px 20px;
       display: flex;
       justify-content: center;
-      gap: 40px;
-      font-size: 12px;
+      margin: 0;
+      padding: 10px 0;
+      gap: 30px;
     }
-    nav ul li {
-      display: inline;
-    }
+
     nav ul li a {
       text-decoration: none;
       color: #0ABAB5;
       font-weight: 600;
       padding: 6px 12px;
+      font-size: 13px;
       border-radius: 4px;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     nav ul li a:hover,
     nav ul li a.active {
       background-color: #0ABAB5;
       color: white;
     }
+
     .social-icons-top {
       text-align: center;
       padding: 10px 0;
       border-bottom: 1px solid #ddd;
     }
+
     .social-icons-top a {
       margin: 0 10px;
       display: inline-block;
     }
+
     .social-icons-top img {
       width: 22px;
       height: 22px;
       opacity: 0.85;
       transition: opacity 0.3s;
     }
+
     .social-icons-top img:hover {
       opacity: 1;
+    }
+
+    header {
+      background: linear-gradient(to right, #ffffff, #f0f4f5);
+      text-align: center;
+      padding: 20px 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header img.logo {
+      width: 170px;
+      margin-bottom: 8px;
+    }
+
+    header h1 {
+      color: #111;
+      font-size: 18px;
+      margin-bottom: 6px;
+      white-space: nowrap;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 12px;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
+
   <div class="social-icons-top">
     <a href="https://www.instagram.com/mug.shopp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
     <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
@@ -77,22 +111,89 @@
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="galeria.html">Galeria</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contato.html">Contatos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contatos">Contatos</a></li>
     </ul>
   </nav>
 
-  <!-- Continua na Parte 2 -->
   <header>
     <img class="logo" src="https://i.postimg.cc/SRGRvDzh/file-00000000b69061f8ae80cb7ce110477f-1-1.png" alt="Logo MugShopp" />
     <h1>PRESENTES QUE EMOCIONAM</h1>
     <p>Transforme momentos especiais em lembranças inesquecíveis com nossos produtos.</p>
   </header>
 
-  <!-- ...a partir daqui permanece exatamente como estava antes... -->
+  <div class="container">
+    <section class="intro">
+  <h2>Presentes únicos e especiais</h2>
+  <p>
+    Personalizamos: <br />
+    ✓ Canecas de cerâmica, alumínio, vidro e polímero.<br />
+    ✓ Azulejos em três tamanhos<br />
+    ✓ Placas, porta-chaves e porta-retratos em MDF.<br />
+    ✓ Mini almofadas<br />
+    ✓ Squeezes de alumínio<br />
+    ✓ Latas térmicas e comuns<br />
+    E muito mais...
+  </p>
+</section>
 
-  <!-- AQUI ENTRA TODO O RESTANTE DO SEU CÓDIGO ORIGINAL -->
-  <!-- Desde a <div class="container"> até o <footer> -->
+<div class="carousel-wrapper" aria-label="Galeria de produtos">
+  <div class="carousel">
+    <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Produto 1" />
+    <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" alt="Produto 2" />
+    <img src="https://i.postimg.cc/wvM3GhQy/IMG-20240706-110105.png" alt="Produto 3" />
+    <img src="https://i.postimg.cc/ZKD5g9DX/IMG-20240709-111136.jpg" alt="Produto 4" />
+    <img src="https://i.postimg.cc/Sx2xpyBR/IMG-20240903-190619.jpg" alt="Produto 5" />
+    <img src="https://i.postimg.cc/LXGfkCF6/SGCAM-20230818-131503678.png" alt="Produto 6" />
+    <img src="https://i.postimg.cc/t496znwP/IMG-20250629-082700.png" alt="Produto 7" />
+    <img src="https://i.postimg.cc/yd33Nm3q/IMG-20240903-190522.jpg" alt="Produto 8" />
+    <img src="https://i.postimg.cc/ZKSvTyTg/Amostradinho-Chopp-3.jpg" alt="Produto 9" />
+    <img src="https://i.postimg.cc/25M3g1c0/IMG-20250629-082722.png" alt="Produto 10" />
+  </div>
+</div>
+
+<!-- ...todo o conteúdo da Home continua normalmente -->
+
+<!-- Final do conteúdo -->
+<footer>
+  &copy; 2025 MugShopp - Todos os direitos reservados.
+  <!-- Contador do MegaContador -->
+  <div align="center" style="margin-top:10px;">
+    <a title="Contador de Visitas do MegaContador" href="https://megacontador.com.br/" target="_blank" rel="noopener noreferrer">
+      <img src="https://megacontador.com.br/img-ScCnoVZweDyIliz0-3.gif" border="0" alt="Contador de visitas" />
+    </a>
+  </div>
+</footer>
+
+<style>
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+    margin: 0 auto 50px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 40px;
+  }
+
+  .carousel {
+    display: flex;
+    width: max-content;
+    animation: slide 35s linear infinite;
+  }
+
+  .carousel img {
+    height: 240px;
+    margin-right: 16px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
 
 </body>
 </html>
