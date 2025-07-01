@@ -106,7 +106,6 @@
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 13px;
-      box-sizing: border-box;
     }
     .product button {
       background-color: #0ABAB5;
@@ -118,7 +117,6 @@
       border-radius: 6px;
       cursor: pointer;
       margin-top: 8px;
-      box-sizing: border-box;
     }
     .product button:hover {
       background-color: #088e8a;
@@ -129,9 +127,6 @@
       border-radius: 8px;
       margin-top: 10px;
       font-size: 13px;
-      display: none;
-      text-align: left;
-      white-space: pre-line;
     }
     .whatsapp-button {
       background-color: #25D366;
@@ -159,50 +154,6 @@
       <p>Veja abaixo algumas sugestões de produtos! Temos muito mais no nosso catálogo do WhatsApp. Todos podem ser personalizados com fotos ou temas prontos. Escolha o que quiser, insira seu CEP, e faça seu pedido com um clique!</p>
     </section>
     <div class="product-grid">
-
-      <!-- Produto: Azulejo -->
-      <div class="product" id="produto-azulejo">
-        <h3>Azulejo 20x20 cm</h3>
-        <div class="carousel">
-          <img src="https://i.postimg.cc/kgz0yDXP/IMG-20250701-081641.png" alt="Azulejo com foto" />
-          <img src="https://i.postimg.cc/rFyZPpcb/IMG-20250701-111913.png" alt="Azulejo com tema" />
-        </div>
-        <p>Azulejo cerâmico 20x20 cm, ideal para personalização com fotos ou temas. Preço: R$ 35,00</p>
-        <label for="modelo-azulejo">Modelo:</label>
-        <select id="modelo-azulejo">
-          <option value="foto">Com foto</option>
-          <option value="tema">Com tema</option>
-        </select>
-        <label for="quantidade-azulejo">Quantidade:</label>
-        <input type="number" id="quantidade-azulejo" min="1" value="1" />
-        <label for="cep-azulejo">Seu CEP:</label>
-        <input type="text" id="cep-azulejo" placeholder="Ex: 12071600" maxlength="8" />
-        <button onclick="calcularFrete('azulejo')">Calcular Frete</button>
-        <div class="resumo" id="resumo-azulejo"></div>
-        <button class="whatsapp-button" id="whatsapp-azulejo">Pedir pelo WhatsApp</button>
-      </div>
-
-      <!-- Produto: Placa MDF -->
-      <div class="product" id="produto-placa">
-        <h3>Placa MDF A4</h3>
-        <div class="carousel">
-          <img src="https://i.postimg.cc/y6yVjhZh/10-20250701-070735-0009.jpg" alt="Placa MDF com foto" />
-          <img src="https://i.postimg.cc/5224rHVH/1-20250701-070735-0000.jpg" alt="Placa MDF com tema" />
-        </div>
-        <p>Placa MDF 3mm A4 personalizável com fotos ou temas. Preço: R$ 35,00</p>
-        <label for="modelo-placa">Modelo:</label>
-        <select id="modelo-placa">
-          <option value="foto">Com foto</option>
-          <option value="tema">Com tema</option>
-        </select>
-        <label for="quantidade-placa">Quantidade:</label>
-        <input type="number" id="quantidade-placa" min="1" value="1" />
-        <label for="cep-placa">Seu CEP:</label>
-        <input type="text" id="cep-placa" placeholder="Ex: 12071600" maxlength="8" />
-        <button onclick="calcularFrete('placa')">Calcular Frete</button>
-        <div class="resumo" id="resumo-placa"></div>
-        <button class="whatsapp-button" id="whatsapp-placa">Pedir pelo WhatsApp</button>
-      </div>
 <!-- Produto: Quebra-Cabeça -->
       <div class="product" id="produto-quebra">
         <h3>Quebra-Cabeça MDF 12 peças</h3>
@@ -222,7 +173,7 @@
         <input type="text" id="cep-quebra" placeholder="Ex: 12071600" maxlength="8" />
         <button onclick="calcularFrete('quebra')">Calcular Frete</button>
         <div class="resumo" id="resumo-quebra"></div>
-        <button class="whatsapp-button" id="whatsapp-quebra">Pedir pelo WhatsApp</button>
+        <button class="product whatsapp-button" id="whatsapp-quebra">Pedir pelo WhatsApp</button>
       </div>
 
       <!-- Produto: Almofada -->
@@ -244,7 +195,7 @@
         <input type="text" id="cep-almofada" placeholder="Ex: 12071600" maxlength="8" />
         <button onclick="calcularFrete('almofada')">Calcular Frete</button>
         <div class="resumo" id="resumo-almofada"></div>
-        <button class="whatsapp-button" id="whatsapp-almofada">Pedir pelo WhatsApp</button>
+        <button class="product whatsapp-button" id="whatsapp-almofada">Pedir pelo WhatsApp</button>
       </div>
 
       <!-- Produto: Caneca -->
@@ -266,89 +217,88 @@
         <input type="text" id="cep-caneca" placeholder="Ex: 12071600" maxlength="8" />
         <button onclick="calcularFrete('caneca')">Calcular Frete</button>
         <div class="resumo" id="resumo-caneca"></div>
-        <button class="whatsapp-button" id="whatsapp-caneca">Pedir pelo WhatsApp</button>
+        <button class="product whatsapp-button" id="whatsapp-caneca">Pedir pelo WhatsApp</button>
       </div>
     </div> <!-- fecha .product-grid -->
   </div> <!-- fecha .container -->
 <script>
-  function formatarPreco(valor) {
-    return valor.toLocaleString('pt-BR', {
-      style: 'currency',
-      currency: 'BRL'
-    });
-  }
-
-  const tabelaFrete = {
-    azulejo: 15.00,
-    placa: 12.00,
-    quebra: 18.00,
-    almofada: 10.00,
-    caneca: 14.00
-  };
-
-  const precos = {
-    azulejo: 35.00,
-    placa: 35.00,
-    quebra: 24.00,
-    almofada: 20.00,
-    caneca: 32.00
-  };
-
-  const pedidos = {};
-
-  function calcularFrete(produto) {
-    const modelo = document.getElementById(`modelo-${produto}`).value;
-    const quantidade = parseInt(document.getElementById(`quantidade-${produto}`).value);
-    const cep = document.getElementById(`cep-${produto}`).value.trim();
-    const resumoDiv = document.getElementById(`resumo-${produto}`);
-    const botaoWpp = document.getElementById(`whatsapp-${produto}`);
-
-    if (!cep.match(/^\d{8}$/)) {
-      alert('Por favor, informe um CEP válido com 8 dígitos.');
-      return;
+    function formatarPreco(valor) {
+      return valor.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+      });
     }
 
-    if (quantidade < 1 || isNaN(quantidade)) {
-      alert('Informe uma quantidade válida.');
-      return;
+    const tabelaFrete = {
+      azulejo: 15.00,
+      placa: 12.00,
+      quebra: 18.00,
+      almofada: 10.00,
+      caneca: 14.00
+    };
+
+    const precos = {
+      azulejo: 35.00,
+      placa: 35.00,
+      quebra: 24.00,
+      almofada: 20.00,
+      caneca: 32.00
+    };
+
+    const pedidos = {};
+
+    function calcularFrete(produto) {
+      const modelo = document.getElementById(`modelo-${produto}`).value;
+      const quantidade = parseInt(document.getElementById(`quantidade-${produto}`).value);
+      const cep = document.getElementById(`cep-${produto}`).value.trim();
+      const resumoDiv = document.getElementById(`resumo-${produto}`);
+      const botaoWpp = document.getElementById(`whatsapp-${produto}`);
+
+      if (!cep.match(/^\d{8}$/)) {
+        alert('Por favor, informe um CEP válido com 8 dígitos.');
+        return;
+      }
+
+      if (quantidade < 1 || isNaN(quantidade)) {
+        alert('Informe uma quantidade válida.');
+        return;
+      }
+
+      const frete = tabelaFrete[produto];
+      const valorProduto = precos[produto] * quantidade;
+      const total = valorProduto + frete;
+
+      pedidos[produto] = {
+        produto: produto.charAt(0).toUpperCase() + produto.slice(1),
+        modelo: modelo === 'foto' ? 'Com foto' : 'Com tema',
+        quantidade,
+        valorProduto,
+        frete,
+        total,
+        cep
+      };
+
+      resumoDiv.style.display = 'block';
+      resumoDiv.innerHTML = `
+        <strong>Resumo do pedido:</strong><br />
+        Produto: ${pedidos[produto].produto}<br />
+        Modelo: ${pedidos[produto].modelo}<br />
+        Quantidade: ${quantidade}<br />
+        Valor: ${formatarPreco(valorProduto)}<br />
+        Frete: ${formatarPreco(frete)}<br />
+        <strong>Total: ${formatarPreco(total)}</strong>
+      `;
+
+      botaoWpp.style.display = 'block';
+      botaoWpp.onclick = () => {
+        const msg = `Olá! Gostaria de fazer este pedido:\n\n` +
+                    `${quantidade}x ${pedidos[produto].produto} (${pedidos[produto].modelo})\n` +
+                    `Total com frete: ${formatarPreco(total)}\nCEP: ${cep}`;
+        const link = `https://wa.me/5512992439101?text=${encodeURIComponent(msg)}`;
+        window.open(link, '_blank');
+      };
     }
-
-    const frete = tabelaFrete[produto];
-    const valorProduto = precos[produto] * quantidade;
-    const total = valorProduto + frete;
-
-    pedidos[produto] = {
-      produto: produto.charAt(0).toUpperCase() + produto.slice(1),
-      modelo: modelo === 'foto' ? 'Com foto' : 'Com tema',
-      quantidade,
-      valorProduto,
-      frete,
-      total,
-      cep
-    };
-
-    resumoDiv.style.display = 'block';
-    resumoDiv.innerHTML = `
-      <strong>Resumo do pedido:</strong><br />
-      Produto: ${pedidos[produto].produto}<br />
-      Modelo: ${pedidos[produto].modelo}<br />
-      Quantidade: ${quantidade}<br />
-      Valor: ${formatarPreco(valorProduto)}<br />
-      Frete: ${formatarPreco(frete)}<br />
-      <strong>Total: ${formatarPreco(total)}</strong>
-    `;
-
-    botaoWpp.style.display = 'block';
-    botaoWpp.onclick = () => {
-      const msg = `Olá! Gostaria de fazer este pedido:%0A%0A` +
-                  `${quantidade}x ${pedidos[produto].produto} (${pedidos[produto].modelo})%0A` +
-                  `Total com frete: ${formatarPreco(total)}%0ACEP: ${cep}`;
-      const link = `https://wa.me/5512992439101?text=${msg}`;
-      window.open(link, '_blank');
-    };
-  }
-</script>
-
+  </script>
 </body>
 </html>
 
