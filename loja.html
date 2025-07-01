@@ -1,428 +1,324 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Loja | PRESENTES PERSONALIZADOS MugShopp</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja | MugShopp</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(white, #f8f9fa);
-      color: #222;
+      background: linear-gradient(white, #f9f9f9);
       margin: 0;
-      padding: 0 10px 40px 10px;
-      font-size: 14px;
-      line-height: 1.5;
+      padding: 0;
+      font-size: 13px;
+      color: #222;
     }
-
     nav {
-      background: linear-gradient(to right, #ffffff, #f0f4f5);
-      border-bottom: 1px solid #ccc;
-      padding: 12px 20px;
+      background-color: #ffffff;
+      padding: 10px 20px;
       display: flex;
       justify-content: center;
       gap: 30px;
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 1px;
+      border-bottom: 1px solid #ddd;
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 10;
     }
     nav a {
-      color: #0ABAB5;
       text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    nav a:hover, nav a.active {
-      color: #088e8a;
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 980px;
-      margin: 20px auto 60px auto;
-      padding: 0 15px;
-    }
-
-    h2 {
       color: #0ABAB5;
-      font-size: 22px;
-      margin-bottom: 18px;
-      font-weight: 700;
-      text-align: center;
-      letter-spacing: 1px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s;
     }
-
-    .produtos-grid {
+    nav a:hover {
+      color: #088e8a;
+    }
+    header {
+      text-align: center;
+      padding: 20px 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      color: #0ABAB5;
+    }
+    .produto {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .produto h2 {
+      color: #0ABAB5;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .carrossel {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      scroll-snap-type: x mandatory;
+      margin-bottom: 12px;
+    }
+    .carrossel img {
+      flex: 0 0 auto;
+      width: 240px;
+      height: auto;
+      scroll-snap-align: start;
+      border-radius: 6px;
+      object-fit: cover;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .descricao {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .opcoes {
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .produto {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      width: 230px;
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: box-shadow 0.3s ease;
-    }
-    .produto:hover {
-      box-shadow: 0 5px 14px rgba(0,0,0,0.15);
-    }
-
-    .produto img {
-      width: 200px;
-      height: 140px;
-      object-fit: contain;
-      border-radius: 8px;
-      margin-bottom: 12px;
-    }
-
-    .produto h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
-      color: #0ABAB5;
-      text-align: center;
-    }
-
-    .descricao {
-      font-size: 12.5px;
-      color: #555;
-      text-align: center;
+      gap: 12px;
       margin-bottom: 10px;
-      min-height: 40px;
-      line-height: 1.3;
     }
-
-    label {
+    .opcoes select, .opcoes input {
+      padding: 6px;
+      font-size: 13px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .resumo {
+      margin-top: 10px;
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 6px;
       font-size: 13px;
       color: #333;
-      margin-top: 8px;
-      display: block;
-    }
-    select, input[type="number"], input[type="text"] {
-      width: 100%;
-      padding: 6px 8px;
-      margin-top: 4px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-      box-sizing: border-box;
-      transition: border-color 0.3s ease;
-    }
-    select:focus, input[type="number"]:focus, input[type="text"]:focus {
-      border-color: #0ABAB5;
-      outline: none;
-    }
-
-    button {
-      margin-top: 14px;
-      padding: 10px 0;
-      width: 100%;
-      font-size: 15px;
-      font-weight: 700;
-      background-color: #0ABAB5;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #088e8a;
-    }
-
-    #resumo-pedido {
-      max-width: 700px;
-      margin: 30px auto 0 auto;
-      background: #e4f0ff;
-      border-radius: 12px;
-      padding: 20px;
-      font-size: 16px;
-      color: #0a3d62;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       display: none;
     }
-    #resumo-pedido h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-    #resumo-pedido ul {
-      list-style: none;
-      padding-left: 0;
-      margin-bottom: 15px;
-    }
-    #resumo-pedido ul li {
-      padding: 6px 0;
-      border-bottom: 1px solid #cbd6e2;
-    }
-    #resumo-pedido .total {
-      font-weight: 700;
-      font-size: 18px;
-      margin-top: 12px;
-      border-top: 2px solid #0ABAB5;
-      padding-top: 10px;
-    }
-    #resumo-pedido .botao-whatsapp {
-      display: block;
-      margin: 20px auto 0 auto;
+    .whatsapp-btn {
       background-color: #25D366;
       color: white;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-weight: 700;
-      font-size: 17px;
-      text-align: center;
+      padding: 10px 20px;
       text-decoration: none;
-      width: fit-content;
-      box-shadow: 0 4px 10px rgba(37, 211, 102, 0.6);
-      transition: background-color 0.3s ease;
-    }
-    #resumo-pedido .botao-whatsapp:hover {
-      background-color: #128C4A;
-    }
-
-    @media(max-width: 820px) {
-      .produtos-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-      .produto {
-        width: 90%;
-      }
-      nav {
-        flex-wrap: wrap;
-        gap: 15px;
-      }
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-
   <nav>
     <a href="index.html">Home</a>
-    <a href="loja.html" class="active">Loja</a>
+    <a href="loja.html">Loja</a>
     <a href="#">FAQ</a>
     <a href="#">Contato</a>
   </nav>
-
-  <div class="container">
-    <h2>Loja de Presentes Personalizados</h2>
-    <p style="text-align:center; color:#555; font-size:14px; margin-bottom:30px;">
-      Escolha os produtos, selecione o modelo, a quantidade e informe seu CEP para calcular o frete.
-    </p>
-
-    <div class="produtos-grid">
-
-      <!-- Produto Azulejo 20x20 -->
-      <div class="produto" data-produto="Azulejo 20x20" data-preco="35.00" data-peso="0.4">
-        <img src="https://i.postimg.cc/kgz0yDXP/IMG-20250701-081641.png" alt="Azulejo 20x20 - Fotos" />
-        <h3>Azulejo 20x20</h3>
-        <div class="descricao">Azulejos prontos com estampas exclusivas.</div>
-        <label for="azulejo-modelo">Modelo:</label>
-        <select id="azulejo-modelo" class="modelo">
-          <option value="Fotos">Fotos</option>
-          <option value="Temas">Temas</option>
-        </select>
-        <label for="azulejo-quantidade">Quantidade:</label>
-        <input type="number" id="azulejo-quantidade" class="quantidade" min="0" value="0" />
-        <label for="azulejo-cep">CEP:</label>
-        <input type="text" id="azulejo-cep" class="cep" placeholder="Ex: 12170-000" maxlength="9" />
-        <button class="btn-calcular">Calcular Frete</button>
-      </div>
-
-      <!-- Produto Placa MDF A4 -->
-      <div class="produto" data-produto="Placa MDF A4" data-preco="17.00" data-peso="0.3">
-        <img src="https://i.postimg.cc/VLzNPZ8H/13-20250701-070735-0012.jpg" alt="Placa MDF A4 - Fotos" />
-        <h3>Placa MDF A4</h3>
-        <div class="descricao">Placas MDF 3mm, estampas exclusivas prontas.</div>
-        <label for="placa-modelo">Modelo:</label>
-        <select id="placa-modelo" class="modelo">
-          <option value="Fotos">Fotos</option>
-          <option value="Temas">Temas</option>
-        </select>
-        <label for="placa-quantidade">Quantidade:</label>
-        <input type="number" id="placa-quantidade" class="quantidade" min="0" value="0" />
-        <label for="placa-cep">CEP:</label>
-        <input type="text" id="placa-cep" class="cep" placeholder="Ex: 12170-000" maxlength="9" />
-        <button class="btn-calcular">Calcular Frete</button>
-      </div>
-<!-- Produto Quebra-Cabeça 12 peças -->
-      <div class="produto" data-produto="Quebra-Cabeça 12 peças" data-preco="45.00" data-peso="0.35">
-        <img src="https://i.postimg.cc/rssMz3w8/IMG-20250701-080723.jpg" alt="Quebra-Cabeça 12 peças - Fotos" />
-        <h3>Quebra-Cabeça 12 peças</h3>
-        <div class="descricao">Quebra-cabeça MDF 3mm, pode ser personalizado com fotos ou temas.</div>
-        <label for="quebra-modelo">Modelo:</label>
-        <select id="quebra-modelo" class="modelo">
-          <option value="Fotos">Fotos</option>
-          <option value="Temas">Temas</option>
-        </select>
-        <label for="quebra-quantidade">Quantidade:</label>
-        <input type="number" id="quebra-quantidade" class="quantidade" min="0" value="0" />
-        <label for="quebra-cep">CEP:</label>
-        <input type="text" id="quebra-cep" class="cep" placeholder="Ex: 12170-000" maxlength="9" />
-        <button class="btn-calcular">Calcular Frete</button>
-      </div>
-
-      <!-- Produto Almofadinha 20x20 -->
-      <div class="produto" data-produto="Almofadinha 20x20" data-preco="20.00" data-peso="0.2">
-        <img src="https://i.postimg.cc/8PPdZHjL/IMG-20250701-082456.jpg" alt="Almofadinha 20x20 - Fotos" />
-        <h3>Almofadinha 20x20</h3>
-        <div class="descricao">Mini almofada 20x20 cm, estampas prontas e exclusivas.</div>
-        <label for="almofada-modelo">Modelo:</label>
-        <select id="almofada-modelo" class="modelo">
-          <option value="Fotos">Fotos</option>
-          <option value="Temas">Temas</option>
-        </select>
-        <label for="almofada-quantidade">Quantidade:</label>
-        <input type="number" id="almofada-quantidade" class="quantidade" min="0" value="0" />
-        <label for="almofada-cep">CEP:</label>
-        <input type="text" id="almofada-cep" class="cep" placeholder="Ex: 12170-000" maxlength="9" />
-        <button class="btn-calcular">Calcular Frete</button>
-      </div>
-
-      <!-- Produto Caneca Cerâmica Comum -->
-      <div class="produto" data-produto="Caneca Cerâmica Comum" data-preco="32.00" data-peso="0.4">
-        <img src="https://i.postimg.cc/76rPLmpc/IMG-20250701-082745.jpg" alt="Caneca Cerâmica Comum - Fotos" />
-        <h3>Caneca Cerâmica Comum</h3>
-        <div class="descricao">Canecas de cerâmica com estampas prontas e exclusivas.</div>
-        <label for="caneca-modelo">Modelo:</label>
-        <select id="caneca-modelo" class="modelo">
-          <option value="Fotos">Fotos</option>
-          <option value="Temas">Temas</option>
-        </select>
-        <label for="caneca-quantidade">Quantidade:</label>
-        <input type="number" id="caneca-quantidade" class="quantidade" min="0" value="0" />
-        <label for="caneca-cep">CEP:</label>
-        <input type="text" id="caneca-cep" class="cep" placeholder="Ex: 12170-000" maxlength="9" />
-        <button class="btn-calcular">Calcular Frete</button>
-      </div>
-
-    </div> <!-- fim produtos-grid -->
-
-    <div id="resumo-pedido">
-      <h3>Resumo do Pedido</h3>
-      <ul id="lista-itens"></ul>
-      <div class="total" id="total-pedido"></div>
-      <a href="#" target="_blank" id="btn-whatsapp" class="botao-whatsapp">Pedir pelo WhatsApp</a>
-      <button id="btn-novo-pedido" style="margin-top:15px; padding:10px 20px; border:none; background:#0ABAB5; color:#fff; border-radius:8px; cursor:pointer;">Fazer Novo Pedido</button>
+  <header>
+    <h1>Escolha seu presente personalizado</h1>
+  </header>
+<div class="produto" id="azulejo">
+    <h2>Azulejo 20x20 - R$ 32,00</h2>
+    <div class="carrossel">
+      <img src="https://i.postimg.cc/kgz0yDXP/IMG-20250701-081641.png" alt="Azulejo com foto">
+      <img src="https://i.postimg.cc/zB7Vy6VH/Modelo-03.png" alt="Azulejo com tema">
     </div>
+    <p class="descricao">Azulejo de cerâmica com base. Ideal para decoração afetiva. Personalizado com sua foto ou tema preferido.</p>
+    <div class="opcoes">
+      <select class="modelo">
+        <option value="">Escolha o modelo</option>
+        <option value="Com foto">Com foto</option>
+        <option value="Com tema">Com tema</option>
+      </select>
+      <input type="number" min="1" placeholder="Quantidade" class="quantidade" />
+      <input type="text" placeholder="CEP" class="cep" />
+      <button onclick="calcularFrete(this, 'Azulejo 20x20', 32)">Calcular Frete</button>
+    </div>
+    <div class="resumo"></div>
+    <button class="whatsapp-btn" onclick="enviarWhatsApp(this)">Pedir pelo WhatsApp</button>
   </div>
 
+  <div class="produto" id="placa">
+    <h2>Placa MDF A4 - R$ 28,00</h2>
+    <div class="carrossel">
+      <img src="https://i.postimg.cc/VLzNPZ8H/13-20250701-070735-0012.jpg" alt="Placa com foto">
+      <img src="https://i.postimg.cc/5224rHVH/1-20250701-070735-0000.jpg" alt="Placa com tema">
+    </div>
+    <p class="descricao">Placa em MDF 3mm com acabamento fosco. Personalize com frases, fotos ou temas para emocionar.</p>
+    <div class="opcoes">
+      <select class="modelo">
+        <option value="">Escolha o modelo</option>
+        <option value="Com foto">Com foto</option>
+        <option value="Com tema">Com tema</option>
+      </select>
+      <input type="number" min="1" placeholder="Quantidade" class="quantidade" />
+      <input type="text" placeholder="CEP" class="cep" />
+      <button onclick="calcularFrete(this, 'Placa MDF A4', 28)">Calcular Frete</button>
+    </div>
+    <div class="resumo"></div>
+    <button class="whatsapp-btn" onclick="enviarWhatsApp(this)">Pedir pelo WhatsApp</button>
+  </div>
+
+  <div class="produto" id="quebra-cabeca">
+    <h2>Quebra-Cabeça MDF 12 peças - R$ 30,00</h2>
+    <div class="carrossel">
+      <img src="https://i.postimg.cc/rssMz3w8/IMG-20250701-080723.jpg" alt="Quebra cabeça com foto">
+      <img src="https://i.postimg.cc/RCWbg4yM/IMG-20250701-080712.png" alt="Quebra cabeça com tema">
+    </div>
+    <p class="descricao">Quebra-cabeça em MDF 3mm com 12 peças grandes. Personalize com momentos especiais ou temas divertidos.</p>
+    <div class="opcoes">
+      <select class="modelo">
+        <option value="">Escolha o modelo</option>
+        <option value="Com foto">Com foto</option>
+        <option value="Com tema">Com tema</option>
+      </select>
+      <input type="number" min="1" placeholder="Quantidade" class="quantidade" />
+      <input type="text" placeholder="CEP" class="cep" />
+      <button onclick="calcularFrete(this, 'Quebra-Cabeça MDF 12 peças', 30)">Calcular Frete</button>
+    </div>
+    <div class="resumo"></div>
+    <button class="whatsapp-btn" onclick="enviarWhatsApp(this)">Pedir pelo WhatsApp</button>
+  </div>
+
+  <div class="produto" id="almofada">
+    <h2>Almofadinha 20x20 - R$ 20,00</h2>
+    <div class="carrossel">
+      <img src="https://i.postimg.cc/8PPdZHjL/IMG-20250701-082456.jpg" alt="Almofada com foto">
+      <img src="https://i.postimg.cc/SKKGjGpy/IMG-20250701-082311.jpg" alt="Almofada com tema">
+    </div>
+    <p class="descricao">Mini almofada 20x20 com enchimento. Fofa, leve e cheia de significado. Personalize do seu jeito.</p>
+    <div class="opcoes">
+      <select class="modelo">
+        <option value="">Escolha o modelo</option>
+        <option value="Com foto">Com foto</option>
+        <option value="Com tema">Com tema</option>
+      </select>
+      <input type="number" min="1" placeholder="Quantidade" class="quantidade" />
+      <input type="text" placeholder="CEP" class="cep" />
+      <button onclick="calcularFrete(this, 'Almofadinha 20x20', 20)">Calcular Frete</button>
+    </div>
+    <div class="resumo"></div>
+    <button class="whatsapp-btn" onclick="enviarWhatsApp(this)">Pedir pelo WhatsApp</button>
+  </div>
+<style>
+    .produto {
+      border-bottom: 1px solid #ccc;
+      padding: 30px 10px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .produto h2 {
+      font-size: 16px;
+      color: #0ABAB5;
+      margin-bottom: 10px;
+    }
+    .carrossel {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      scroll-snap-type: x mandatory;
+      margin-bottom: 10px;
+    }
+    .carrossel img {
+      height: 150px;
+      border-radius: 8px;
+      scroll-snap-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .descricao {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .opcoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .opcoes select,
+    .opcoes input {
+      padding: 6px;
+      font-size: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .opcoes button {
+      padding: 6px 12px;
+      font-size: 12px;
+      background-color: #0ABAB5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .resumo {
+      font-size: 12px;
+      margin: 10px 0;
+      color: #444;
+    }
+    .whatsapp-btn {
+      background-color: #25d366;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
+
   <script>
-    // Função para formatar preço em R$
-    function formatarPreco(valor) {
-      return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    }
+    function calcularFrete(botao, produto, preco) {
+      const container = botao.closest('.produto');
+      const modelo = container.querySelector('.modelo').value;
+      const qtd = container.querySelector('.quantidade').value;
+      const cep = container.querySelector('.cep').value;
+      const resumo = container.querySelector('.resumo');
+      const botaoZap = container.querySelector('.whatsapp-btn');
 
-    // Função para validar CEP (formato 00000-000 ou 00000000)
-    function validarCep(cep) {
-      return /^[0-9]{5}-?[0-9]{3}$/.test(cep);
-    }
-
-    // Função para simular cálculo de frete simples, baseado no CEP (apenas um exemplo)
-    function calcularFreteSimulado(cep) {
-      if (!validarCep(cep)) return null;
-      // Vamos usar a lógica: se cep começar com 12 ou 13 (São Paulo região), frete R$ 15, caso contrário R$ 25
-      if (/^(12|13)/.test(cep.replace('-', ''))) {
-        return 15.00;
-      } else {
-        return 25.00;
+      if (!modelo || !qtd || !cep) {
+        resumo.innerHTML = "<span style='color:red'>Preencha todos os campos.</span>";
+        return;
       }
+
+      // Simulação simples de frete com base no CEP
+      let frete = 0;
+      if (cep.startsWith('01') || cep.startsWith('02')) {
+        frete = 12;
+      } else if (cep.startsWith('1')) {
+        frete = 16;
+      } else if (cep.startsWith('2')) {
+        frete = 18;
+      } else {
+        frete = 22;
+      }
+
+      const total = (preco * qtd) + frete;
+
+      resumo.innerHTML = `
+        <strong>Resumo do pedido:</strong><br>
+        Produto: ${produto} - ${modelo}<br>
+        Quantidade: ${qtd}<br>
+        Frete estimado: R$ ${frete.toFixed(2)}<br>
+        Total: <strong>R$ ${total.toFixed(2)}</strong>
+      `;
+
+      botaoZap.style.display = 'inline-block';
+      botaoZap.dataset.msg = `Olá, gostaria de fazer esse pedido:\nProduto: ${produto}\nModelo: ${modelo}\nQuantidade: ${qtd}\nCEP: ${cep}\nFrete estimado: R$ ${frete.toFixed(2)}\nTotal: R$ ${total.toFixed(2)}`;
     }
 
-    // Função para montar a mensagem do pedido para WhatsApp
-    function montarMensagem(itens, total, frete) {
-      let msg = 'Olá, gostaria de fazer esse pedido:\n\n';
-      itens.forEach(item => {
-        msg += `- ${item.produto} | Modelo: ${item.modelo} | Quantidade: ${item.quantidade} | Subtotal: ${formatarPreco(item.subtotal)}\n`;
-      });
-      msg += `\nFrete estimado: ${formatarPreco(frete)}\n`;
-      msg += `Total: ${formatarPreco(total + frete)}\n\n`;
-      msg += 'Por favor, me informe como proceder com o pagamento e o envio. Obrigada!';
-      return encodeURIComponent(msg);
+    function enviarWhatsApp(botao) {
+      const mensagem = encodeURIComponent(botao.dataset.msg);
+      const link = `https://wa.me/5512997908544?text=${mensagem}`;
+      window.open(link, '_blank');
     }
-// Mostrar o resumo do pedido e botão WhatsApp
-    function mostrarResumo(itens, total, frete) {
-      const listaItens = document.getElementById('lista-itens');
-      const totalPedido = document.getElementById('total-pedido');
-      const resumo = document.getElementById('resumo-pedido');
-      const btnWhats = document.getElementById('btn-whatsapp');
-      listaItens.innerHTML = '';
-
-      itens.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.produto} | Modelo: ${item.modelo} | Quantidade: ${item.quantidade} | Subtotal: ${formatarPreco(item.subtotal)}`;
-        listaItens.appendChild(li);
-      });
-
-      totalPedido.textContent = `Frete: ${formatarPreco(frete)} | Total geral: ${formatarPreco(total + frete)}`;
-      resumo.style.display = 'block';
-
-      const telefoneWhats = '5512992439101'; // Seu número com código Brasil + DDD (sem espaços ou sinais)
-      btnWhats.href = `https://wa.me/${telefoneWhats}?text=${montarMensagem(itens, total, frete)}`;
-    }
-
-    // Esconder o resumo e limpar inputs para novo pedido
-    document.getElementById('btn-novo-pedido').addEventListener('click', () => {
-      document.getElementById('resumo-pedido').style.display = 'none';
-
-      // Resetar campos de produtos
-      document.querySelectorAll('.produto').forEach(prod => {
-        prod.querySelector('.quantidade').value = 0;
-        prod.querySelector('.cep').value = '';
-      });
-    });
-
-    // Função principal para tratar o clique em "Calcular Frete"
-    document.querySelectorAll('.btn-calcular').forEach(botao => {
-      botao.addEventListener('click', () => {
-        const produtoDiv = botao.closest('.produto');
-        const produto = produtoDiv.dataset.produto;
-        const preco = parseFloat(produtoDiv.dataset.preco);
-        const peso = parseFloat(produtoDiv.dataset.peso);
-        const modelo = produtoDiv.querySelector('.modelo').value;
-        const quantidade = parseInt(produtoDiv.querySelector('.quantidade').value) || 0;
-        const cep = produtoDiv.querySelector('.cep').value.trim();
-
-        if (quantidade <= 0) {
-          alert('Por favor, insira uma quantidade maior que zero.');
-          return;
-        }
-        if (!validarCep(cep)) {
-          alert('Por favor, insira um CEP válido no formato 00000-000.');
-          return;
-        }
-
-        // Simular cálculo de frete
-        const frete = calcularFreteSimulado(cep);
-        if (frete === null) {
-          alert('CEP inválido para cálculo de frete.');
-          return;
-        }
-
-        // Montar itens para o resumo
-        const itens = [{
-          produto: produto,
-          modelo: modelo,
-          quantidade: quantidade,
-          subtotal: preco * quantidade
-        }];
-
-        mostrarResumo(itens, preco * quantidade, frete);
-
-        // Scrollar para o resumo do pedido
-        document.getElementById('resumo-pedido').scrollIntoView({ behavior: 'smooth' });
-      });
-    });
   </script>
 </body>
-                               </html>
-                               
+</html>
+
