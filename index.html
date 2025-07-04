@@ -71,6 +71,31 @@
     nav a:hover {
       text-decoration: underline;
     }
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 200px;
+      margin: 0 auto 50px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 40px;
+    }
+    .carousel {
+      display: flex;
+      width: max-content;
+      animation: slide 30s linear infinite;
+    }
+    .carousel img {
+      max-height: 180px;
+      width: auto;
+      margin-right: 16px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
   </style>
 </head>
 <body>
@@ -91,7 +116,7 @@
     <a href="faq.html">FAQ</a>
     <a href="contatos.html">Contatos</a>
   </nav>
-  <div class="container">
+<div class="container">
     <section class="intro" id="home">
       <h2>Presentes únicos e especiais</h2>
       <p>
@@ -120,7 +145,7 @@
         <img src="https://i.postimg.cc/25M3g1c0/IMG-20250629-082722.png" alt="Produto 10" />
       </div>
     </div>
-    <section class="about" id="faq">
+<section class="about" id="faq">
       <h2>Sobre a MugShopp</h2>
       <p>
         A MugShopp nasceu do desejo de criar presentes que contam histórias. Começamos humildemente em 2021 e, com muito carinho, hoje temos a satisfação de atender clientes da nossa região, de todo o Brasil e também do exterior. Nosso ateliê está em Taubaté/SP, mas enviamos produtos para todo o Brasil! Compre pelo nosso catálogo no WhatsApp.
@@ -166,7 +191,7 @@
         </div>
       </div>
     </div>
-    <section class="pedido" id="contatos">
+<section class="pedido" id="contatos">
       <h2>Como fazer seu pedido</h2>
       <ul>
         <li>✓ Entre em contato pelo WhatsApp</li>
