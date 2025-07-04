@@ -11,7 +11,8 @@
       color: #222;
       margin: 0;
       padding: 0;
-      font-size: 10px;
+      font-size: 14px; /* aumentei de 10px para 14px para textos principais */
+      line-height: 1.5;
     }
     nav {
       background: #f0f4f5;
@@ -28,7 +29,7 @@
       display: flex;
       justify-content: center;
       gap: 40px;
-      font-size: 12px;
+      font-size: 14px; /* aumento um pouco a fonte do menu */
     }
     nav ul li {
       display: inline;
@@ -76,66 +77,17 @@
     }
     header h1 {
       color: #111;
-      font-size: 18px;
+      font-size: 24px; /* maior título */
       margin-bottom: 6px;
       white-space: nowrap;
       font-weight: bold;
       letter-spacing: 2px;
     }
     header p {
-      font-size: 12px;
+      font-size: 16px; /* texto maior no header */
       color: #555;
       max-width: 700px;
       margin: 0 auto;
-    }
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    .intro {
-      text-align: center;
-      margin-bottom: 40px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 40px;
-    }
-    .intro h2 {
-      color: #0ABAB5;
-      font-size: 18px;
-      margin-bottom: 10px;
-      white-space: nowrap;
-    }
-    .intro p {
-      color: #555;
-      font-size: 13px;
-      max-width: 700px;
-      margin: 0 auto;
-      white-space: pre-line;
-      text-align: left;
-    }
-    .carousel-wrapper {
-      position: relative;
-      overflow: hidden;
-      height: 260px;
-      margin: 0 auto 50px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 40px;
-    }
-    .carousel {
-      display: flex;
-      width: max-content;
-      animation: slide 35s linear infinite;
-    }
-    .carousel img {
-      height: 240px;
-      margin-right: 16px;
-      border-radius: 10px;
-      flex-shrink: 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
     }
   </style>
 </head>
@@ -200,7 +152,8 @@
       </p>
       <p><b>E é exatamente isso que entregamos: presentes que fazem sentido.</b></p>
     </section>
-<div class="cta">
+
+    <div class="cta">
       <h2>Fale com a gente no WhatsApp</h2>
       <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank">Falar agora</a>
     </div>
@@ -239,7 +192,6 @@
         </div>
       </div>
     </div>
-
     <section class="pedido">
       <h2>Como fazer seu pedido</h2>
       <ul>
@@ -261,18 +213,18 @@
     </div>
   </div>
 
-  <div class="social-footer">
+  <div class="social-footer" style="text-align:center; padding:20px 0; border-top:1px solid #ccc;">
     <p>Visite nossas redes sociais</p>
     <div class="social-icons-footer">
-      <a href="https://www.instagram.com/mug.shopp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
-      <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
-      <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
+      <a href="https://www.instagram.com/mug.shopp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:22px; height:22px;" /></a>
+      <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width:22px; height:22px;" /></a>
+      <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width:22px; height:22px;" /></a>
     </div>
   </div>
-<footer>
+<footer style="text-align:center; padding:20px 0; border-top:1px solid #ccc;">
     &copy; 2025 MugShopp - Todos os direitos reservados.
     <!-- Contador do MegaContador -->
-    <div align="center" style="margin-top:10px;">
+    <div style="margin-top:10px;">
       <a title="Contador de Visitas do MegaContador" href="https://megacontador.com.br/" target="_blank" rel="noopener noreferrer">
         <img src="https://megacontador.com.br/img-ScCnoVZweDyIliz0-3.gif" border="0" alt="Contador de visitas" />
       </a>
@@ -280,4 +232,3 @@
   </footer>
 </body>
 </html>
-
