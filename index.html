@@ -55,6 +55,22 @@
       max-width: 700px;
       margin: 0 auto;
     }
+    nav {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 12px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #0ABAB5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     .container {
       max-width: 980px;
       margin: 0 auto;
@@ -235,8 +251,16 @@
     <h1>PRESENTES QUE EMOCIONAM</h1>
     <p>Transforme momentos especiais em lembranças inesquecíveis com nossos produtos.</p>
   </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contatos">Contatos</a>
+  </nav>
+
   <div class="container">
-    <section class="intro">
+    <section id="home" class="intro">
       <h2>Presentes únicos e especiais</h2>
       <p>
         Personalizamos: <br />
@@ -249,7 +273,7 @@
         E muito mais...
       </p>
     </section>
-    <div class="carousel-wrapper" aria-label="Galeria de produtos">
+    <div id="galeria" class="carousel-wrapper" aria-label="Galeria de produtos">
       <div class="carousel">
         <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" alt="Produto 1" />
         <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" alt="Produto 2" />
@@ -263,7 +287,7 @@
         <img src="https://i.postimg.cc/25M3g1c0/IMG-20250629-082722.png" alt="Produto 10" />
       </div>
     </div>
-    <section class="about">
+    <section id="faq" class="about">
       <h2>Sobre a MugShopp</h2>
       <p>A MugShopp nasceu do desejo de criar presentes que contam histórias. Começamos humildemente em 2021 e, com muito carinho, hoje temos a satisfação de atender clientes da nossa região, de todo o Brasil e também do exterior. Nosso ateliê está em Taubaté/SP, mas enviamos produtos para todo o Brasil! Compre pelo nosso catálogo no WhatsApp.</p>
     </section>
@@ -305,7 +329,7 @@
         </div>
       </div>
     </div>
-    <section class="pedido">
+    <section id="contatos" class="pedido">
       <h2>Como fazer seu pedido</h2>
       <ul>
         <li>✓ Entre em contato pelo WhatsApp</li>
@@ -336,6 +360,8 @@
     &copy; 2025 MugShopp - Todos os direitos reservados.
     <!-- Contador do MegaContador -->
     <div align="center" style="margin-top:10px;">
+      <a title="
+        <div align="center" style="margin-top:10px;">
       <a title="Contador de Visitas do MegaContador" href="https://megacontador.com.br/" target="_blank" rel="noopener noreferrer">
         <img src="https://megacontador.com.br/img-ScCnoVZweDyIliz0-3.gif" border="0" alt="Contador de visitas" />
       </a>
