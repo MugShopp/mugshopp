@@ -6,13 +6,14 @@
   <title>MugShopp | Galeria</title>
 
   <!-- Microsoft Clarity tracking code -->
-<script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "s7ic3ygm3o");
-</script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "s7ic3ygm3o");
+  </script>
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -47,17 +48,20 @@
     nav a:hover, nav a.active {
       text-decoration: underline;
     }
+
     .container {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
+
     h1 {
       font-size: 14px;
       text-align: center;
       color: #0ABAB5;
       margin-bottom: 10px;
     }
+
     .intro {
       text-align: center;
       max-width: 700px;
@@ -66,6 +70,7 @@
       color: #555;
       line-height: 1.6;
     }
+
     .carousel {
       display: flex;
       overflow-x: auto;
@@ -89,17 +94,20 @@
     .carousel img:hover {
       transform: scale(1.05);
     }
+
     h2 {
       font-size: 13px;
       margin: 40px 0 12px;
       color: #333;
       text-align: left;
     }
+
     hr {
       border: none;
       border-top: 1px solid #ddd;
       margin: 60px 0 20px;
     }
+
     footer {
       background-color: #f2f2f2;
       text-align: center;
@@ -107,108 +115,158 @@
       color: #555;
       padding: 20px;
     }
+
     .social-footer {
       text-align: center;
       padding: 20px 0 10px;
       background-color: #f8f9fa;
       border-top: 1px solid #ccc;
     }
+
     .social-footer p {
       font-size: 11px;
       margin-bottom: 10px;
       color: #444;
     }
+
     .social-footer .social-icons-footer {
       display: flex;
       justify-content: center;
       gap: 16px;
       margin-bottom: 10px;
     }
+
     .social-footer .social-icons-footer a img {
       width: 24px;
       height: 24px;
       opacity: 0.8;
       transition: opacity 0.3s;
     }
+
     .social-footer .social-icons-footer a img:hover {
       opacity: 1;
     }
+
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #0ABAB5;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #08928d;
+    }
+
+    .banner-topo {
+      background-color: #0ABAB5;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      padding: 6px 10px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   </style>
 </head>
+
 <body>
 
-<header>
-  <img class="logo" src="https://i.postimg.cc/SRGRvDzh/file-00000000b69061f8ae80cb7ce110477f-1-1.png" alt="Logo MugShopp" />
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="galeria.html" class="active">Galeria</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contatos.html">Contato</a>
-  </nav>
-</header>
-
-<div class="container">
-  <h1>Galeria de Produtos</h1>
-  <p class="intro">
-    Nesta galeria, você confere alguns dos produtos que já personalizamos com muito carinho.  
-    Trabalhamos com sublimação de alta qualidade para garantir cores vivas e acabamento impecável.  
-    Cada peça é única e feita especialmente para você.
-  </p>
-
-  <h2>Produtos Diversos</h2>
-  <div class="carousel">
-    <img src="https://i.postimg.cc/j5vFygkC/IMG-20230105-083329.jpg" alt="Produto 1" />
-    <img src="https://i.postimg.cc/NMQn9qDW/IMG-20230518-060102.jpg" alt="Produto 2" />
-    <img src="https://i.postimg.cc/d02XVt22/IMG-20250701-155535.jpg" alt="Produto 3" />
-    <img src="https://i.postimg.cc/ZKQXfQYd/IMG-20250701-155606.jpg" alt="Produto 4" />
-    <img src="https://i.postimg.cc/cJy2W8n1/IMG-20250701-155627.jpg" alt="Produto 5" />
-    <img src="https://i.postimg.cc/pXrgJvvv/IMG-20250701-155642.jpg" alt="Produto 6" />
+  <!-- Faixa rolante -->
+  <div class="banner-topo">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      Atendimento 24h por WhatsApp • Horário comercial com atendimento humano • Fora do horário: suporte com inteligência artificial.
+    </marquee>
   </div>
 
-  <h2>Estampas de cores vibrantes</h2>
-  <div class="carousel">
-    <img src="https://i.postimg.cc/3xDVzZWb/IMG-20250701-155703.jpg" alt="Produto 7" />
-    <img src="https://i.postimg.cc/D0jR3jqR/IMG-20250701-155819.jpg" alt="Produto 8" />
-    <img src="https://i.postimg.cc/Y9xJbqjr/IMG-20250701-160033.jpg" alt="Produto 9" />
-    <img src="https://i.postimg.cc/bv1XSRh2/IMG-20250701-160147.jpg" alt="Produto 10" />
-    <img src="https://i.postimg.cc/8cPx3Qrh/IMG-20250701-160212.jpg" alt="Produto 11" />
-    <img src="https://i.postimg.cc/TwxzVWdN/IMG-20250701-160402.jpg" alt="Produto 12" />
+  <header>
+    <img class="logo" src="https://i.postimg.cc/SRGRvDzh/file-00000000b69061f8ae80cb7ce110477f-1-1.png" alt="Logo MugShopp" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="galeria.html" class="active">Galeria</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contatos.html">Contato</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Galeria de Produtos</h1>
+    <p class="intro">
+      Nesta galeria, você confere alguns dos produtos que já personalizamos com muito carinho.  
+      Trabalhamos com sublimação de alta qualidade para garantir cores vivas e acabamento impecável.  
+      Cada peça é única e feita especialmente para você.
+    </p>
+
+    <h2>Produtos Diversos</h2>
+    <div class="carousel">
+      <img src="https://i.postimg.cc/j5vFygkC/IMG-20230105-083329.jpg" alt="Produto 1" />
+      <img src="https://i.postimg.cc/NMQn9qDW/IMG-20230518-060102.jpg" alt="Produto 2" />
+      <img src="https://i.postimg.cc/d02XVt22/IMG-20250701-155535.jpg" alt="Produto 3" />
+      <img src="https://i.postimg.cc/ZKQXfQYd/IMG-20250701-155606.jpg" alt="Produto 4" />
+      <img src="https://i.postimg.cc/cJy2W8n1/IMG-20250701-155627.jpg" alt="Produto 5" />
+      <img src="https://i.postimg.cc/pXrgJvvv/IMG-20250701-155642.jpg" alt="Produto 6" />
+    </div>
+
+    <h2>Estampas de cores vibrantes</h2>
+    <div class="carousel">
+      <img src="https://i.postimg.cc/3xDVzZWb/IMG-20250701-155703.jpg" alt="Produto 7" />
+      <img src="https://i.postimg.cc/D0jR3jqR/IMG-20250701-155819.jpg" alt="Produto 8" />
+      <img src="https://i.postimg.cc/Y9xJbqjr/IMG-20250701-160033.jpg" alt="Produto 9" />
+      <img src="https://i.postimg.cc/bv1XSRh2/IMG-20250701-160147.jpg" alt="Produto 10" />
+      <img src="https://i.postimg.cc/8cPx3Qrh/IMG-20250701-160212.jpg" alt="Produto 11" />
+      <img src="https://i.postimg.cc/TwxzVWdN/IMG-20250701-160402.jpg" alt="Produto 12" />
+    </div>
+
+    <h2>Diversos temas</h2>
+    <div class="carousel">
+      <img src="https://i.postimg.cc/DwkC3xcD/FB-IMG-1742108149363.png" alt="Caneca de Alumínio" />
+      <img src="https://i.postimg.cc/JzNprj6h/IMG-20241112-124745.png" alt="Quebra-Cabeças" />
+      <img src="https://i.postimg.cc/SQw0j7rL/IMG-20250704-060228.png" alt="Caneca Preta" />
+      <img src="https://i.postimg.cc/pyNBxdK8/FB-IMG-1743016661563.jpg" alt="Canecas Comuns" />
+    </div>
+
+    <!-- Botão WhatsApp -->
+    <div style="text-align:center;">
+      <a class="whatsapp-button" href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank">
+        Gostou de algum produto? Chame a gente no WhatsApp. O atendimento é 24h!
+      </a>
+    </div>
   </div>
 
-  <h2>Diversos temas</h2>
-  <div class="carousel">
-    <img src="https://i.postimg.cc/DwkC3xcD/FB-IMG-1742108149363.png" alt="Caneca de Alumínio" />
-    <img src="https://i.postimg.cc/JzNprj6h/IMG-20241112-124745.png" alt="Quebra-Cabeças" />
-    <img src="https://i.postimg.cc/SQw0j7rL/IMG-20250704-060228.png" alt="Caneca Preta" />
-    <img src="https://i.postimg.cc/pyNBxdK8/FB-IMG-1743016661563.jpg" alt="Canecas Comuns" />
-  </div>
-</div>
   <hr />
 
-<footer>
-  Todos os nossos produtos são personalizados por meio do processo de sublimação,  
-  que garante alta durabilidade, cores vivas e detalhes nítidos.  
-  Trabalhamos sob encomenda e os pedidos podem ser feitos diretamente pelo nosso WhatsApp.  
-  Estamos sempre prontos para criar algo especial com você.
-</footer>
+  <footer>
+    Todos os nossos produtos são personalizados por meio do processo de sublimação,  
+    que garante alta durabilidade, cores vivas e detalhes nítidos.  
+    Trabalhamos sob encomenda e os pedidos podem ser feitos diretamente pelo nosso WhatsApp.  
+    Estamos sempre prontos para criar algo especial com você.
+  </footer>
 
-<div class="social-footer">
-  <p>Siga-nos nas redes sociais</p>
-  <div class="social-icons-footer">
-    <a href="https://www.instagram.com/mug.shopp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
-    <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
-    <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
+  <div class="social-footer">
+    <p>Siga-nos nas redes sociais</p>
+    <div class="social-icons-footer">
+      <a href="https://www.instagram.com/mug.shopp" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+      <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+      <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
+    </div>
   </div>
-</div>
 
-<footer>
-  &copy; 2025 MugShopp - Todos os direitos reservados.
-  <div align="center" style="margin-top:10px;">
-    <a title="Contador de Visitas do MegaContador" href="https://megacontador.com.br/" target="_blank" rel="noopener noreferrer">
-      <img src="https://megacontador.com.br/img-ScCnoVZweDyIliz0-3.gif" border="0" alt="Contador de visitas" />
-    </a>
-  </div>
-</footer>
+  <footer>
+    &copy; 2025 MugShopp - Todos os direitos reservados.
+    <div align="center" style="margin-top:10px;">
+      <a title="Contador de Visitas do MegaContador" href="https://megacontador.com.br/" target="_blank" rel="noopener noreferrer">
+        <img src="https://megacontador.com.br/img-ScCnoVZweDyIliz0-3.gif" border="0" alt="Contador de visitas" />
+      </a>
+    </div>
+  </footer>
 
 </body>
 </html>
