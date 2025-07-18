@@ -44,20 +44,34 @@
     nav.menu-principal {
       background-color: #f8f9fa;
       border-bottom: 1px solid #ddd;
-      text-align: center;
       padding: 12px 0;
+    }
+    nav.menu-principal ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px; /* espaçamento maior igual home */
       font-size: 14px;
     }
-    nav.menu-principal a {
+    nav.menu-principal ul li {
+      display: inline;
+    }
+    nav.menu-principal ul li a {
       color: #0ABAB5;
       font-weight: bold;
-      margin: 0 18px;
       text-decoration: none;
-      padding: 4px 0;
+      padding: 4px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: inline-block;
     }
-    nav.menu-principal a:hover,
-    nav.menu-principal a.active {
-      text-decoration: underline;
+    nav.menu-principal ul li a:hover,
+    nav.menu-principal ul li a.active {
+      background-color: #0ABAB5;
+      color: white;
+      text-decoration: none;
     }
 
     /* Faixa atendimento 24h abaixo do menu */
@@ -76,7 +90,7 @@
     .banner-topo .marquee-content {
       display: inline-block;
       padding-left: 100%;
-      animation: marqueeAnim 20s linear infinite;
+      animation: marqueeAnim 25s linear infinite;
       white-space: nowrap;
     }
     @keyframes marqueeAnim {
@@ -208,7 +222,7 @@
 </head>
 <body>
 
-  <!-- Botões das redes sociais -->
+  <!-- Botões das redes sociais no topo -->
   <div class="social-icons-top" aria-label="Redes sociais MugShopp">
     <a href="https://www.instagram.com/mug.shopp" target="_blank" rel="noopener noreferrer" aria-label="Instagram MugShopp">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
@@ -223,10 +237,12 @@
 
   <!-- Menu principal -->
   <nav class="menu-principal" role="navigation" aria-label="Menu principal">
-    <a href="index.html">Home</a>
-    <a href="galeria.html" class="active">Galeria</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contatos.html">Contato</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="galeria.html" class="active">Galeria</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contatos.html">Contato</a></li>
+    </ul>
   </nav>
 
   <!-- Faixa rolante atendimento -->
