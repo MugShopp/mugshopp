@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MugShopp | FAQ & Consultoria</title>
+  <title>MugShopp | Dúvidas Frequentes</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:italic,wght@400;700&display=swap" rel="stylesheet">
 
@@ -14,7 +14,7 @@
       --text-gray: #6e6e73;
       --bg-palha: #f3efea; 
       --white: #ffffff;
-      --soft-border: #f0f0f0;
+      --soft-border: #efefef;
     }
 
     body {
@@ -25,7 +25,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Navegação Padronizada */
+    /* Navegação */
     nav {
       background: rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(15px);
@@ -48,39 +48,53 @@
     }
     nav ul li a:hover, nav ul li a.active { color: var(--champagne); }
 
+    /* Header Centralizado com Tagline */
     header {
-      padding: 60px 20px;
+      padding: 100px 20px 80px;
       text-align: center;
       border-bottom: 1px solid var(--soft-border);
     }
     .brand-logo h1 {
       font-weight: 600;
-      font-size: 22px;
-      letter-spacing: 8px;
+      font-size: 26px;
+      letter-spacing: 10px;
       margin: 0;
       text-transform: uppercase;
     }
     .brand-logo .shopp { color: var(--champagne); }
+    
+    .brand-tagline {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--black);
+      margin-top: 15px;
+      display: block;
+      font-weight: 400;
+    }
 
     .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 60px 20px 100px;
+      padding: 80px 20px 100px;
     }
 
+    /* Títulos Alinhados à Esquerda */
     .faq-intro {
-      text-align: center;
+      text-align: left;
       margin-bottom: 80px;
     }
     .faq-intro h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      margin-bottom: 15px;
+      font-size: 36px;
+      margin-bottom: 20px;
     }
     .faq-intro p {
       color: var(--text-gray);
       font-size: 15px;
       font-weight: 300;
+      max-width: 600px;
+      line-height: 1.6;
     }
 
     /* Grid de Perguntas */
@@ -90,13 +104,14 @@
       gap: 50px;
     }
     .faq-item {
-      padding-bottom: 30px;
+      padding-bottom: 40px;
       border-bottom: 1px solid var(--soft-border);
+      text-align: left;
     }
     .faq-item h3 {
       font-family: 'Playfair Display', serif;
       font-style: italic;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 400;
       color: var(--black);
       margin-bottom: 15px;
@@ -105,46 +120,46 @@
     }
     .faq-item h3::before {
       content: "";
-      width: 15px;
+      width: 20px;
       height: 1px;
       background: var(--champagne);
-      margin-top: 12px;
-      margin-right: 15px;
+      margin-top: 14px;
+      margin-right: 20px;
       flex-shrink: 0;
     }
     .faq-item p {
       font-size: 14px;
       color: var(--text-gray);
-      line-height: 1.6;
+      line-height: 1.8;
       font-weight: 300;
-      padding-left: 30px;
+      padding-left: 40px;
     }
 
-    /* Banner de Suporte Híbrido */
+    /* Banner de Suporte */
     .support-banner {
       background: var(--bg-palha);
-      padding: 50px 30px;
-      text-align: center;
+      padding: 60px 40px;
+      text-align: left; /* Padrão grandes marcas */
       margin-top: 80px;
       border-radius: 4px;
     }
     .support-banner h4 {
       font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      margin-bottom: 10px;
+      font-size: 24px;
+      margin-bottom: 15px;
     }
     .support-banner p {
       font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       color: var(--text-gray);
-      margin-bottom: 25px;
-      line-height: 1.8;
+      margin-bottom: 35px;
+      line-height: 2;
     }
     .btn-minimal {
       background: var(--black);
       color: var(--white);
-      padding: 15px 35px;
+      padding: 16px 40px;
       text-decoration: none;
       font-size: 10px;
       font-weight: 600;
@@ -155,18 +170,45 @@
     }
     .btn-minimal:hover { background: var(--champagne); }
 
-    /* Rodapé */
+    /* Rodapé Unificado */
     footer {
-      padding: 80px 20px;
-      text-align: center;
+      padding: 100px 20px;
       border-top: 1px solid var(--soft-border);
       background: #fafafa;
     }
-    .social-icons img { width: 20px; margin: 0 12px; opacity: 0.5; }
-    footer p { font-size: 9px; color: #bbb; margin-top: 30px; letter-spacing: 1px; line-height: 2; }
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .footer-socials {
+      margin-bottom: 40px;
+    }
+    .footer-socials img { 
+      width: 20px; 
+      margin-right: 25px; 
+      opacity: 0.6; 
+      transition: 0.3s;
+    }
+    .footer-socials img:hover { opacity: 1; }
+    
+    .footer-legal {
+      font-size: 10px;
+      color: #999;
+      letter-spacing: 1px;
+      line-height: 2.2;
+      text-transform: uppercase;
+    }
+    .footer-brand {
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 8px;
+      display: block;
+    }
 
     @media (max-width: 768px) {
       .faq-item p { padding-left: 0; }
+      .faq-item h3::before { display: none; }
     }
   </style>
 </head>
@@ -184,14 +226,15 @@
   <header>
     <div class="brand-logo">
       <h1>MUG<span class="shopp">SHOPP</span></h1>
+      <span class="brand-tagline">Estúdio de Design & Personalizados</span>
     </div>
   </header>
 
   <div class="container">
     
     <div class="faq-intro">
-      <h2>FAQ & Consultoria</h2>
-      <p>Informações essenciais sobre o nosso processo de criação e entrega.</p>
+      <h2>Dúvidas Frequentes</h2>
+      <p>Informações essenciais sobre o nosso processo de curadoria, produção e entrega.</p>
     </div>
 
     <div class="faq-grid">
@@ -202,7 +245,7 @@
       </div>
 
       <div class="faq-item">
-        <h3>Quais são os tipos de produtos que vocês personalizam?</h3>
+        <h3>Quais tipos de produtos vocês personalizam?</h3>
         <p>Especializamo-nos em cerâmica, polímero, vidro, alumínio e azulejos de alta qualidade. Itens têxteis e projetos especiais de grandes volumes estão disponíveis sob consulta.</p>
       </div>
 
@@ -218,17 +261,17 @@
 
       <div class="faq-item">
         <h3>Qual o prazo de produção e logística?</h3>
-        <p>O tempo de curadoria e produção é de <strong>3 dias úteis</strong>. O prazo de entrega varia conforme a região e o método de envio selecionado.</p>
+        <p>O tempo de curadoria e produção médio é de 3 dias úteis. O prazo total de entrega varia conforme a sua região e o método de envio selecionado.</p>
       </div>
 
       <div class="faq-item">
         <h3>Por que o investimento é antecipado?</h3>
-        <p>Trabalhamos com curadoria exclusiva sob demanda. Por serem peças personalizadas e únicas, o faturamento antecipado garante a reserva dos materiais e o início da produção.</p>
+        <p>Trabalhamos com curadoria exclusiva sob demanda. Por serem peças personalizadas e únicas, o faturamento antecipado garante a reserva dos materiais e o início imediato da produção.</p>
       </div>
 
       <div class="faq-item">
         <h3>Vocês atendem demandas corporativas?</h3>
-        <p>Sim. Atendemos eventos e empresas com volumes entre 50 e 500 unidades, garantindo unidade visual e fidelidade à marca em todos os itens.</p>
+        <p>Sim. Atendemos eventos e empresas com volumes personalizados, garantindo unidade visual e fidelidade à marca em todos os itens do projeto.</p>
       </div>
 
     </div>
@@ -237,7 +280,7 @@
       <h4>Atendimento Personalizado</h4>
       <p>
         Horário comercial: Consultoria Humana Direta <br>
-        Noites, feriados e fins de semana: Suporte Inteligente 24h
+        Noites e fins de semana: Suporte Inteligente 24h
       </p>
       <a href="https://wa.me/message/XJOCYNPNDO4DD1" class="btn-minimal">Iniciar Conversa</a>
     </div>
@@ -245,11 +288,18 @@
   </div>
 
   <footer>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/mug.shopp"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" /></a>
-        <a href="https://wa.me/message/XJOCYNPNDO4DD1"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" /></a>
+    <div class="footer-content">
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/mug.shopp"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+        <a href="https://wa.me/message/XJOCYNPNDO4DD1"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
+      </div>
+      <div class="footer-legal">
+        <span class="footer-brand">MUGSHOPP • ESTÚDIO DE DESIGN E EXCELÊNCIA</span>
+        TAUBATÉ/SP • CNPJ: 64.137.780/0001-07 <br>
+        PROJETOS EXCLUSIVOS EXECUTADOS VIA SUBLIMAÇÃO DE ALTA DEFINIÇÃO. <br>
+        &copy; 2026 TODOS OS DIREITOS RESERVADOS.
+      </div>
     </div>
-    <p>&copy; 2026 MUGSHOPP • ESTÚDIO DE DESIGN E EXCELÊNCIA. <br> PROJETOS EXCLUSIVOS DESENVOLVIDOS EM TAUBATÉ/SP.</p>
   </footer>
 
 </body>
