@@ -25,7 +25,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Navegação Padronizada */
+    /* Navegação */
     nav {
       background: rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(15px);
@@ -48,56 +48,72 @@
     }
     nav ul li a:hover, nav ul li a.active { color: var(--champagne); }
 
-    /* Cabeçalho Galeria */
+    /* Header Centralizado */
     header {
-      padding: 60px 20px;
+      padding: 100px 20px 80px;
       text-align: center;
       border-bottom: 1px solid var(--soft-border);
     }
     .brand-logo h1 {
       font-weight: 600;
-      font-size: 22px;
-      letter-spacing: 8px;
+      font-size: 26px;
+      letter-spacing: 10px;
       margin: 0;
+      text-transform: uppercase;
     }
     .brand-logo .shopp { color: var(--champagne); }
     
+    .brand-tagline {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--black);
+      margin-top: 15px;
+      display: block;
+      font-weight: 400;
+    }
+
+    .gallery-title-area {
+      max-width: 1100px;
+      margin: 60px auto 0;
+      text-align: left;
+      padding: 0 20px;
+    }
     .gallery-title {
       font-family: 'Playfair Display', serif;
       font-size: 32px;
-      margin-top: 30px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .gallery-intro {
       max-width: 650px;
-      margin: 0 auto;
       color: var(--text-gray);
       font-size: 14px;
       font-weight: 300;
       line-height: 1.8;
+      margin: 0;
     }
 
-    /* Grid de Categorias */
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 20px 80px;
     }
 
+    /* Categorias */
     .category-section {
-      margin-top: 60px;
+      margin-top: 80px;
     }
     .category-header {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       border-bottom: 1px solid var(--soft-border);
-      padding-bottom: 10px;
+      padding-bottom: 15px;
     }
     .category-header h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 20px;
+      font-size: 26px;
       font-weight: 400;
       margin: 0;
     }
@@ -107,55 +123,72 @@
       color: var(--champagne);
       text-transform: uppercase;
       font-weight: 600;
+      text-align: right;
     }
 
-    /* Scroll Horizontal */
     .product-scroll {
       display: flex;
       overflow-x: auto;
-      gap: 20px;
-      padding-bottom: 20px;
+      gap: 30px;
+      padding-bottom: 30px;
       scrollbar-width: none; 
     }
     .product-scroll::-webkit-scrollbar { display: none; }
 
     .product-item {
       flex: 0 0 auto;
-      width: 280px;
-      text-align: center;
+      width: 320px;
+      text-align: left;
     }
     .product-item img {
       width: 100%;
-      height: 280px;
+      height: 320px;
       object-fit: cover;
       background: var(--bg-palha);
-      border-radius: 2px;
-      transition: 0.4s ease;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     }
-    .product-item p {
+    
+    /* Legendas Debaixo da Imagem */
+    .product-item .item-title {
       font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 15px;
+      letter-spacing: 2px;
+      margin-top: 25px;
+      color: var(--black);
+      font-weight: 600;
+      display: block;
+    }
+    .product-item .item-desc {
+      font-size: 12px;
       color: var(--text-gray);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      margin-top: 8px;
+      display: block;
+      max-width: 280px;
     }
 
-    /* Call to Action */
     .gallery-cta {
       background: var(--bg-palha);
-      padding: 80px 20px;
-      text-align: center;
-      margin-top: 40px;
+      padding: 100px 20px;
+      text-align: left;
+    }
+    .cta-container {
+      max-width: 1100px;
+      margin: 0 auto;
     }
     .gallery-cta h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      margin-bottom: 25px;
+      font-size: 28px;
+      margin-bottom: 35px;
+      max-width: 500px;
     }
     .btn-minimal {
       background: var(--black);
       color: var(--white);
-      padding: 15px 35px;
+      padding: 16px 40px;
       text-decoration: none;
       font-size: 10px;
       font-weight: 600;
@@ -166,18 +199,44 @@
     }
     .btn-minimal:hover { background: var(--champagne); }
 
-    /* Rodapé */
+    /* Rodapé Unificado */
     footer {
-      padding: 60px 20px;
-      text-align: center;
+      padding: 100px 20px;
       border-top: 1px solid var(--soft-border);
+      background: #fafafa;
     }
-    .social-icons img { width: 20px; margin: 0 12px; opacity: 0.6; }
-    footer p { font-size: 9px; color: #bbb; margin-top: 30px; letter-spacing: 1px; line-height: 1.8;}
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .footer-socials {
+      margin-bottom: 40px;
+    }
+    .footer-socials img { 
+      width: 20px; 
+      margin-right: 25px; 
+      opacity: 0.6; 
+      transition: 0.3s;
+    }
+    .footer-socials img:hover { opacity: 1; }
+    
+    .footer-legal {
+      font-size: 10px;
+      color: #999;
+      letter-spacing: 1px;
+      line-height: 2.2;
+      text-transform: uppercase;
+    }
+    .footer-brand {
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 8px;
+      display: block;
+    }
 
     @media (max-width: 768px) {
-      .product-item { width: 100%; } 
-      .gallery-title { font-size: 26px; }
+      .product-item { width: 280px; } 
     }
   </style>
 </head>
@@ -195,10 +254,14 @@
   <header>
     <div class="brand-logo">
       <h1>MUG<span class="shopp">SHOPP</span></h1>
+      <span class="brand-tagline">Estúdio de Design & Personalizados</span>
     </div>
+  </header>
+
+  <div class="gallery-title-area">
     <h1 class="gallery-title">Curadoria de Projetos</h1>
     <p class="gallery-intro">Abaixo, apresentamos uma curadoria visual que exemplifica o padrão de acabamento do nosso estúdio. Cada conceito aqui exibido é inspirado em composições reais executadas pela MugShopp, unindo referências de design à nossa excelência em personalização.</p>
-  </header>
+  </div>
 
   <div class="container">
 
@@ -210,7 +273,8 @@
       <div class="product-scroll">
         <div class="product-item">
           <img src="https://i.postimg.cc/bJRKyqBM/Azulejo_cura.png" alt="Azulejos de Memória" />
-          <p>Composição Afetiva</p>
+          <span class="item-title">Composição Afetiva</span>
+          <span class="item-desc">Equilíbrio visual entre fotografias e elementos gráficos para eternizar memórias com sofisticação.</span>
         </div>
       </div>
     </section>
@@ -223,7 +287,8 @@
       <div class="product-scroll">
         <div class="product-item">
           <img src="https://i.postimg.cc/PxMBXd7T/Canecas_cura.png" alt="Canecas & Design" />
-          <p>Design & Montagem</p>
+          <span class="item-title">Estudo de Composição</span>
+          <span class="item-desc">A aplicação técnica da identidade visual através de tipografia e paleta de cores harmonizadas.</span>
         </div>
       </div>
     </section>
@@ -236,7 +301,8 @@
       <div class="product-scroll">
         <div class="product-item">
           <img src="https://i.postimg.cc/rm9vVqP3/Variedades.png" alt="Kits de Celebração" />
-          <p>Projetos Especiais</p>
+          <span class="item-title">Casamentos & Grupos</span>
+          <span class="item-desc">Projetos em série que preservam a unidade visual e o requinte em cada unidade produzida.</span>
         </div>
       </div>
     </section>
@@ -244,18 +310,25 @@
   </div>
 
   <section class="gallery-cta">
-    <div class="container">
+    <div class="cta-container">
       <h3>Inspirado para criar o seu?</h3>
       <a href="https://wa.me/message/XJOCYNPNDO4DD1" class="btn-minimal">Solicitar Projeto Exclusivo</a>
     </div>
   </section>
 
   <footer>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/mug.shopp"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" /></a>
-        <a href="https://wa.me/message/XJOCYNPNDO4DD1"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" /></a>
+    <div class="footer-content">
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/mug.shopp"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+        <a href="https://wa.me/message/XJOCYNPNDO4DD1"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
+      </div>
+      <div class="footer-legal">
+        <span class="footer-brand">MUGSHOPP • ESTÚDIO DE DESIGN E EXCELÊNCIA</span>
+        TAUBATÉ/SP • CNPJ: 64.137.780/0001-07 <br>
+        PROJETOS EXCLUSIVOS EXECUTADOS VIA SUBLIMAÇÃO DE ALTA DEFINIÇÃO. <br>
+        &copy; 2026 TODOS OS DIREITOS RESERVADOS.
+      </div>
     </div>
-    <p>&copy; 2026 MUGSHOPP • ESTÚDIO DE DESIGN E EXCELÊNCIA. <br> TODOS OS PROJETOS SÃO EXECUTADOS COM TÉCNICA DE SUBLIMAÇÃO DE ALTA DEFINIÇÃO.</p>
   </footer>
 
 </body>
