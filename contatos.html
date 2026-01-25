@@ -3,208 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MugShopp | Contatos</title>
+  <title>MugShopp | Ateliê & Contatos</title>
   
-  <!-- Microsoft Clarity tracking code -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "s7ic3ygm3o");
-  </script>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:italic,wght@400;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --champagne: #C5A059;
+      --black: #1a1a1a;
+      --text-gray: #6e6e73;
+      --bg-palha: #f3efea; 
+      --white: #ffffff;
+      --soft-border: #f0f0f0;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0; padding: 0;
-      background: #fff;
-      color: #222;
-      font-size: 12px;
+      background: var(--white);
+      color: var(--black);
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Botões redes sociais no topo */
-    .social-icons-top {
-      background-color: #f8f9fa;
-      border-bottom: 1px solid #ddd;
-      padding: 8px 20px;
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-    }
-    .social-icons-top a img {
-      width: 24px;
-      height: 24px;
-      opacity: 0.8;
-      transition: opacity 0.3s;
-    }
-    .social-icons-top a img:hover {
-      opacity: 1;
-    }
-
-    /* Menu principal abaixo dos botões */
-    nav.menu-principal {
-      background-color: #f8f9fa;
-      border-bottom: 1px solid #ddd;
-      padding: 12px 0;
-    }
-    nav.menu-principal ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 40px; /* espaçamento igual ao FAQ */
-      font-size: 14px;
-    }
-    nav.menu-principal ul li {
-      display: inline;
-    }
-    nav.menu-principal ul li a {
-      color: #0ABAB5;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 4px 12px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      display: inline-block;
-    }
-    nav.menu-principal ul li a:hover,
-    nav.menu-principal ul li a.active {
-      background-color: #0ABAB5;
-      color: white;
-      text-decoration: none;
-    }
-
-    /* Faixa rolante atendimento */
-    .banner-topo {
-      background-color: #f4f4f4;
-      color: #222;
-      font-size: 12px;
+    /* Navegação Padronizada */
+    nav {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(15px);
+      padding: 20px 0;
       text-align: center;
-      padding: 7px 0;
-      overflow: hidden;
-      white-space: nowrap;
-      border-bottom: 1px solid #ccc;
-      width: 100%;
-      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--soft-border);
     }
-    .banner-topo .marquee-content {
-      display: inline-block;
-      padding-left: 100%;
-      animation: marqueeAnim 25s linear infinite;
-      white-space: nowrap;
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 40px; }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 500;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: 0.3s;
     }
-    @keyframes marqueeAnim {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
+    nav ul li a:hover, nav ul li a.active { color: var(--champagne); }
 
-    /* Logotipo abaixo da faixa */
     header {
-      background: linear-gradient(to right, #ffffff, #f0f4f5);
-      padding: 20px 20px 30px;
+      padding: 60px 20px;
       text-align: center;
+      border-bottom: 1px solid var(--soft-border);
     }
-    header img.logo {
-      width: 160px;
-      margin: 0 auto;
-      display: block;
+    .brand-logo h1 {
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: 8px;
+      margin: 0;
+      text-transform: uppercase;
     }
+    .brand-logo .shopp { color: var(--champagne); }
 
-    /* Conteúdo principal */
+    /* Conteúdo Contatos */
     .container {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 80px 20px 100px;
     }
-    h1 {
-      font-size: 14px;
+
+    .contact-header {
       text-align: center;
-      color: #0ABAB5;
+      margin-bottom: 60px;
+    }
+    .contact-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .history-text {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-gray);
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    /* Grid de Informações */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 60px 0;
+      text-align: center;
+    }
+    .info-item h4 {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--champagne);
       margin-bottom: 10px;
     }
-    .intro {
+    .info-item p {
+      font-size: 14px;
+      color: var(--black);
+      margin: 0;
+      font-weight: 400;
+    }
+
+    /* Imagem do Ateliê */
+    .atelier-showcase {
+      margin: 80px 0;
       text-align: center;
-      font-size: 12px;
-      color: #555;
-      margin-bottom: 30px;
+    }
+    .atelier-showcase img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 2px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      background: var(--bg-palha);
+    }
+
+    /* Banner Final */
+    .visit-banner {
+      background: var(--bg-palha);
+      padding: 50px 30px;
+      text-align: center;
+      border-radius: 4px;
+    }
+    .visit-banner p {
+      font-size: 13px;
+      color: var(--text-gray);
+      margin-bottom: 0;
       line-height: 1.6;
     }
-    .contact-info {
-      font-size: 12px;
-      text-align: center;
-      color: #333;
-      line-height: 1.8;
-      margin-bottom: 30px;
-    }
-    .contact-info strong {
-      color: #0ABAB5;
-    }
-    .ateliê-img {
-      text-align: center;
-      margin: 50px 0 30px;
-    }
- .ateliê-img img {
-  width: 52%;
-  max-width: 640px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
 
     /* Rodapé */
     footer {
-      background-color: #f2f2f2;
+      padding: 80px 20px;
       text-align: center;
-      font-size: 11px;
-      color: #555;
-      padding: 20px;
+      border-top: 1px solid var(--soft-border);
+      background: #fafafa;
     }
-    .social-footer {
-      text-align: center;
-      padding: 20px 0 10px;
-      background-color: #f8f9fa;
-      border-top: 1px solid #ccc;
-    }
-    .social-footer p {
-      font-size: 11px;
-      margin-bottom: 10px;
-      color: #444;
-    }
-    .social-footer .social-icons-footer {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 10px;
-    }
-    .social-footer .social-icons-footer a img {
-      width: 24px;
-      height: 24px;
-      opacity: 0.8;
-      transition: opacity 0.3s;
-    }
-    .social-footer .social-icons-footer a img:hover {
-      opacity: 1;
+    .social-icons img { width: 20px; margin: 0 12px; opacity: 0.5; }
+    footer p { font-size: 9px; color: #bbb; margin-top: 30px; letter-spacing: 1px; line-height: 2; }
+
+    @media (max-width: 768px) {
+      .info-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-header h2 { font-size: 28px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Botões redes sociais no topo -->
-  <div class="social-icons-top" aria-label="Redes sociais MugShopp">
-    <a href="https://www.instagram.com/mug.shopp" target="_blank" rel="noopener noreferrer" aria-label="Instagram MugShopp">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
-    </a>
-    <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook MugShopp">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-    </a>
-    <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp MugShopp">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-    </a>
-  </div>
-
-  <!-- Menu principal -->
-  <nav class="menu-principal" role="navigation" aria-label="Menu principal">
+  <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="galeria.html">Galeria</a></li>
@@ -213,60 +164,57 @@
     </ul>
   </nav>
 
-  <!-- Faixa rolante atendimento -->
-  <div class="banner-topo" role="region" aria-label="Avaliações no Google">
-    <div class="marquee-content">
-      Veja nossas avaliações no Google! Os clientes que entraram em contato conosco estão satisfeitos!
-    </div>
-  </div>
-
-  <!-- Logotipo -->
   <header>
-    <img class="logo" src="https://i.postimg.cc/SRGRvDzh/file-00000000b69061f8ae80cb7ce110477f-1-1.png" alt="Logo MugShopp" />
+    <div class="brand-logo">
+      <h1>MUG<span class="shopp">SHOPP</span></h1>
+    </div>
   </header>
 
-  <!-- Conteúdo principal -->
   <div class="container">
-    <h1>Contatos</h1>
-
-    <div class="intro">
-      A MugShopp nasceu do desejo de criar presentes que contam histórias. Começamos humildemente em 2021 e, com muito carinho, hoje temos a satisfação de atender clientes da nossa região, de todo o Brasil e também do exterior. Nosso ateliê está em Taubaté/SP, mas enviamos produtos para todo o Brasil! Compre pelo nosso catálogo no WhatsApp. - NÃO TEMOS LOJA FÍSICA. Nosso ateliê funciona como ponto de retirada. - Os pedidos são feitos online e a retirada é agendada com horário marcado. Se preferir, enviamos para todo o Brasil via transportadora.
+    
+    <div class="contact-header">
+      <h2>Nosso Ateliê</h2>
+      <div class="history-text">
+        Fundada em 2021, a MugShopp nasceu da paixão por transformar objetos em memórias. O que começou como um desejo humilde de criar afeto hoje é um estúdio que atende clientes em todo o Brasil e no exterior, unindo curadoria de design e excelência técnica.
+      </div>
     </div>
 
-    <div class="contact-info">
-      <p><strong>E-mail:</strong> vendas@mugshopp.com.br</p>
-      <p><strong>WhatsApp:</strong> (12) 99243.9101</p>
-      <p><strong>Endereço:</strong> Rua Emília, 384 - Gurilândia - Taubaté/SP</p>
+    <div class="info-grid">
+      <div class="info-item">
+        <h4>WhatsApp</h4>
+        <p>(12) 99243.9101</p>
+      </div>
+      <div class="info-item">
+        <h4>E-mail</h4>
+        <p>vendas@mugshopp.com.br</p>
+      </div>
+      <div class="info-item">
+        <h4>Localização</h4>
+        <p>Taubaté, São Paulo</p>
+      </div>
     </div>
 
-    <div class="ateliê-img">
-      <img src="https://i.postimg.cc/R0vBNkBz/Gemini-Generated-Image-vk6wq8vk6wq8vk6w.png" alt="Foto do Ateliê MugShopp" />
+    <div class="atelier-showcase">
+      <img src="https://i.postimg.cc/R0vBNkBz/Gemini-Generated-Image-vk6wq8vk6wq8vk6w.png" alt="Ateliê de Design MugShopp" />
     </div>
-  </div>
 
-  <!-- Redes sociais rodapé -->
-  <div class="social-footer" aria-label="Redes sociais no rodapé">
-    <p>Siga-nos nas redes sociais</p>
-    <div class="social-icons-footer">
-      <a href="https://www.instagram.com/mug.shopp" target="_blank" rel="noopener noreferrer" aria-label="Instagram MugShopp">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
-      </a>
-      <a href="https://www.facebook.com/share/16dCMSGPWz/" target="_blank" rel="noopener noreferrer" aria-label="Facebook MugShopp">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-      </a>
-      <a href="https://wa.me/message/XJOCYNPNDO4DD1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp MugShopp">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
+    <div class="visit-banner">
+      <p>
+        <strong>Rua Emília, 384 • Gurilândia • Taubaté/SP</strong> <br>
+        Operamos como ateliê de criação e ponto de retirada agendado. <br>
+        Pedidos realizados exclusivamente via curadoria digital.
+      </p>
     </div>
+
   </div>
 
   <footer>
-    &copy; 2025 MugShopp - Todos os direitos reservados.
-    <div align="center" style="margin-top:10px;">
-      <a title="Contador de Visitas do MegaContador" href="https://megacontador.com.br/" target="_blank" rel="noopener noreferrer">
-        <img src="https://megacontador.com.br/img-ScCnoVZweDyIliz0-3.gif" border="0" alt="Contador de visitas" />
-      </a>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/mug.shopp"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" /></a>
+        <a href="https://wa.me/message/XJOCYNPNDO4DD1"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" /></a>
     </div>
+    <p>&copy; 2026 MUGSHOPP • ESTÚDIO DE DESIGN E EXCELÊNCIA. <br> TODOS OS DIREITOS RESERVADOS.</p>
   </footer>
+
 </body>
 </html>
