@@ -109,15 +109,15 @@
       font-weight: 600;
     }
 
-    /* Scroll Horizontal Elegante */
+    /* Scroll Horizontal */
     .product-scroll {
       display: flex;
       overflow-x: auto;
       gap: 20px;
       padding-bottom: 20px;
-      scrollbar-width: none; /* Firefox */
+      scrollbar-width: none; 
     }
-    .product-scroll::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+    .product-scroll::-webkit-scrollbar { display: none; }
 
     .product-item {
       flex: 0 0 auto;
@@ -131,10 +131,6 @@
       background: var(--bg-palha);
       border-radius: 2px;
       transition: 0.4s ease;
-    }
-    .product-item:hover img {
-      transform: scale(1.02);
-      filter: brightness(0.9);
     }
     .product-item p {
       font-size: 11px;
@@ -180,7 +176,7 @@
     footer p { font-size: 9px; color: #bbb; margin-top: 30px; letter-spacing: 1px; line-height: 1.8;}
 
     @media (max-width: 768px) {
-      .product-item { width: 220px; }
+      .product-item { width: 100%; } /* Mobile ocupa largura total já que é só uma */
       .gallery-title { font-size: 26px; }
     }
   </style>
@@ -213,20 +209,8 @@
       </div>
       <div class="product-scroll">
         <div class="product-item">
-          <img src="https://i.postimg.cc/MGwnvVnj/1079_(2).png" alt="Azulejo Decorativo" />
-          <p>Linha Clássica</p>
-        </div>
-        <div class="product-item">
-          <img src="https://i.postimg.cc/L5JXrVbG/1079_(1).png" alt="Azulejo Personalizado" />
-          <p>Design Minimalista</p>
-        </div>
-        <div class="product-item">
-          <img src="https://i.postimg.cc/kgz0yDXP/IMG-20250701-081641.png" alt="Azulejo Foto" />
-          <p>Composição Afetiva</p>
-        </div>
-        <div class="product-item">
-          <img src="https://i.postimg.cc/XNPX9TZW/05.jpg" alt="Azulejo Brilho" />
-          <p>Acabamento Premium</p>
+          <img src="https://i.postimg.cc/bJRKyqBM/Azulejo_cura.png" alt="Azulejos de Memória" />
+          <p>Linha Afetiva</p>
         </div>
       </div>
     </section>
@@ -238,45 +222,21 @@
       </div>
       <div class="product-scroll">
         <div class="product-item">
-          <img src="https://i.postimg.cc/KvmprsC9/1-1-1228x1536.jpg" alt="Caneca Cerâmica" />
+          <img src="https://i.postimg.cc/PxMBXd7T/Canecas_cura.png" alt="Canecas & Design" />
           <p>Coleção Autoral</p>
-        </div>
-        <div class="product-item">
-          <img src="https://i.postimg.cc/Dy5jCPT7/15-jpg.webp" alt="Caneca Brilho" />
-          <p>Design Corporativo</p>
-        </div>
-        <div class="product-item">
-          <img src="https://i.postimg.cc/jqHkfr3w/Pacote-de-Artes-para-Canecas-Personalizadas-Namorados-7-jpg.webp" alt="Caneca Arte" />
-          <p>Linha Presente</p>
-        </div>
-        <div class="product-item">
-          <img src="https://i.postimg.cc/VvmggdZS/7-1.png" alt="Caneca Especial" />
-          <p>Edição Limitada</p>
         </div>
       </div>
     </section>
 
     <section class="category-section">
       <div class="category-header">
-        <h2>Variedades Curadas</h2>
-        <span>Projetos Especiais</span>
+        <h2>Kits de Celebração</h2>
+        <span>Casamentos & Grupos</span>
       </div>
       <div class="product-scroll">
         <div class="product-item">
-          <img src="https://i.postimg.cc/k5DgVsnG/IMG-20250718-000027.jpg" alt="Produto Variado" />
-          <p>Soluções Criativas</p>
-        </div>
-        <div class="product-item">
-          <img src="https://i.postimg.cc/Mp6TwxNy/IMG-20250718-000036.jpg" alt="Item Personalizado" />
-          <p>Detalhes que Importam</p>
-        </div>
-        <div class="product-item">
-          <img src="https://i.postimg.cc/g2g0kQb1/IMG-20250718-000316.jpg" alt="Gift Design" />
-          <p>Curadoria de Brindes</p>
-        </div>
-        <div class="product-item">
-          <img src="https://i.postimg.cc/jj9dyf5X/IMG-20250718-000332.jpg" alt="Projeto Especial" />
-          <p>Excelência em Cada Peça</p>
+          <img src="https://i.postimg.cc/rm9vVqP3/Variedades.png" alt="Kits de Celebração" />
+          <p>Projetos Especiais</p>
         </div>
       </div>
     </section>
