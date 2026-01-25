@@ -109,14 +109,22 @@
     }
     .btn-minimal:hover { background: var(--champagne); }
 
+    /* Carrossel de Produtos com Canto Arredondado e Sombra */
     .product-highlight {
-      padding: 60px 0;
+      padding: 80px 0;
       background: #fafafa;
       border-top: 1px solid var(--soft-border);
       border-bottom: 1px solid var(--soft-border);
     }
-    .carousel-track { display: flex; width: max-content; animation: slide 60s linear infinite; }
-    .carousel-track img { height: 160px; margin-right: 20px; border-radius: 2px; }
+    .carousel-track { display: flex; width: max-content; animation: slide 60s linear infinite; padding: 20px 0; }
+    .carousel-track img { 
+      height: 220px; 
+      margin-right: 35px; 
+      border-radius: 12px; /* Cantos Arredondados */
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* Sombra Elegante */
+      transition: transform 0.4s ease;
+    }
+    .carousel-track img:hover { transform: scale(1.05); }
 
     .testimonials {
       padding: 80px 0;
@@ -128,7 +136,6 @@
     .testimonial-item p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; color: #444; }
     .testimonial-item span { font-size: 10px; font-weight: 600; letter-spacing: 1px; color: var(--champagne); text-transform: uppercase; margin-top: 10px; display: block; }
 
-    /* Carrossel de Marcas Corporativas - Atualizado com Novo Parceiro */
     .brands-section { 
       padding: 80px 0; 
       text-align: center; 
@@ -204,13 +211,17 @@
   <section class="product-highlight">
     <div style="overflow: hidden;">
       <div class="carousel-track">
-        <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" />
-        <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" />
-        <img src="https://i.postimg.cc/wvM3GhQy/IMG-20240706-110105.png" />
-        <img src="https://i.postimg.cc/ZKD5g9DX/IMG-20240709-111136.jpg" />
-        <img src="https://i.postimg.cc/Sx2xpyBR/IMG-20240903-190619.jpg" />
-        <img src="https://i.postimg.cc/Znw5J0YB/FB-IMG-1724412621473.jpg" />
-        <img src="https://i.postimg.cc/X7vvQKxw/FB-IMG-1724412964468.jpg" />
+        <img src="https://i.postimg.cc/G2W5vT1d/Alumi6.png" alt="Caneca Alumínio">
+        <img src="https://i.postimg.cc/0QTB7Kq2/Caneca.png" alt="Caneca Design">
+        <img src="https://i.postimg.cc/g0kjPr5Q/Squeze_floral.png" alt="Squeeze Floral">
+        <img src="https://i.postimg.cc/gJCT3LPx/Quebra_Cabeças.png" alt="Quebra-Cabeças Personalizado">
+        <img src="https://i.postimg.cc/FzSw6gx7/Azu_foto.png" alt="Azulejo Decorativo">
+        
+        <img src="https://i.postimg.cc/G2W5vT1d/Alumi6.png">
+        <img src="https://i.postimg.cc/0QTB7Kq2/Caneca.png">
+        <img src="https://i.postimg.cc/g0kjPr5Q/Squeze_floral.png">
+        <img src="https://i.postimg.cc/gJCT3LPx/Quebra_Cabeças.png">
+        <img src="https://i.postimg.cc/FzSw6gx7/Azu_foto.png">
       </div>
     </div>
   </section>
@@ -239,7 +250,7 @@
         <img src="https://i.postimg.cc/HLQrCvfG/images_(1)_(1).png" alt="Podcast Aldine Muller">
         <img src="https://i.postimg.cc/d08hKNzw/IMG_20260106_140938.png" alt="Convicção Contabilidade">
         <img src="https://i.postimg.cc/28NMv0by/IMG-20260107-WA0021.png" alt="Diocese">
-        <img src="https://i.postimg.cc/vH6Mj7h1/IMG_20260109_WA0028.jpg" alt="Novo Parceiro">
+        <img src="https://i.postimg.cc/vH6Mj7h1/IMG_20260109_WA0028.jpg" alt="Parceiro Estratégico">
         
         <img src="https://i.postimg.cc/QtQ10dXK/IMG_20260106_143040.png">
         <img src="https://i.postimg.cc/HLQrCvfG/images_(1)_(1).png">
