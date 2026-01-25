@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MUGSHOPP | Estúdio de Design</title>
+  <title>MUGSHOPP | Estúdio de Design & Curadoria</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:italic,wght@400;700&display=swap" rel="stylesheet">
 
@@ -70,9 +70,22 @@
       display: block;
     }
 
+    .main-headline { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 38px; 
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .sub-headline { 
+      font-size: 15px; 
+      font-weight: 300; 
+      color: var(--text-gray); 
+      max-width: 600px; 
+      margin: 0 auto; 
+    }
+
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    /* Seção 1: Serviços */
     .services-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -101,7 +114,6 @@
     }
     .btn-minimal:hover { background: var(--champagne); }
 
-    /* Seção 2: Carrossel de Produtos */
     .product-highlight {
       padding: 60px 0;
       background: #fafafa;
@@ -109,9 +121,8 @@
       border-bottom: 1px solid var(--soft-border);
     }
     .carousel-track { display: flex; width: max-content; animation: slide 60s linear infinite; }
-    .carousel-track img { height: 160px; margin-right: 20px; filter: grayscale(5%); }
+    .carousel-track img { height: 160px; margin-right: 20px; filter: grayscale(5%); border-radius: 2px; }
 
-    /* Seção 3: Depoimentos */
     .testimonials {
       padding: 80px 0;
       display: grid;
@@ -122,48 +133,60 @@
     .testimonial-item p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; color: #444; }
     .testimonial-item span { font-size: 10px; font-weight: 600; letter-spacing: 1px; color: var(--champagne); text-transform: uppercase; margin-top: 10px; display: block; }
 
-    /* Seção 4: CTA Orçamento */
-    .cta-section {
-      padding: 80px 0;
+    /* Seção de Marcas Re-auditada */
+    .brands-section { padding: 80px 0; text-align: center; border-top: 1px solid var(--soft-border); }
+    .brands-label { font-size: 9px; letter-spacing: 3px; color: #bbb; margin-bottom: 15px; text-transform: uppercase; }
+    
+    .brands-wrapper { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; overflow: visible; }
+    .brand-item { position: relative; display: inline-block; cursor: pointer; }
+    .brand-item img { height: 26px; filter: grayscale(100%); opacity: 0.3; transition: 0.4s ease; }
+    .brand-item:hover img { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+
+    .brand-info {
+      visibility: hidden;
+      width: 200px;
+      background-color: var(--black);
+      color: #fff;
       text-align: center;
-      background: var(--bg-palha);
+      border-radius: 4px;
+      padding: 12px;
+      position: absolute;
+      z-index: 100;
+      bottom: 150%;
+      left: 50%;
+      margin-left: -100px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 11px;
+      line-height: 1.4;
+      font-weight: 300;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      pointer-events: none;
     }
+    .brand-info::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: var(--black) transparent transparent transparent;
+    }
+    .brand-item:hover .brand-info { visibility: visible; opacity: 1; }
+
+    .cta-section { padding: 100px 0; text-align: center; background: var(--bg-palha); }
     .cta-section h2 { font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 30px; }
 
-    /* Seção 5: Marcas Corporativas */
-    .brands-section {
-      padding: 60px 0;
-      text-align: center;
-      border-top: 1px solid var(--soft-border);
-    }
-    .brands-label { font-size: 9px; letter-spacing: 3px; color: #bbb; margin-bottom: 40px; text-transform: uppercase; }
-    .brands-track { display: flex; width: max-content; animation: logosSlide 30s linear infinite; align-items: center; }
-    .brands-track img { height: 26px; margin: 0 50px; filter: grayscale(100%); opacity: 0.3; transition: 0.4s; }
-    .brands-track img:hover { filter: grayscale(0%); opacity: 1; }
-
-    /* Seção 6: Avaliações (Separada) */
-    .google-reviews {
-      padding: 40px 0;
-      text-align: center;
-      background: #fff;
-      border-top: 1px solid var(--soft-border);
-    }
-    .google-reviews img { width: 90px; margin-bottom: 10px; }
-    .google-reviews p { font-size: 10px; letter-spacing: 2px; color: #aaa; font-weight: 600; }
-
-    footer {
-      padding: 60px 20px;
-      text-align: center;
-      border-top: 1px solid var(--soft-border);
-    }
-    .social-icons img { width: 20px; margin: 0 10px; opacity: 0.6; }
-    footer p { font-size: 9px; color: #bbb; margin-top: 20px; line-height: 2; }
+    footer { padding: 60px 20px; text-align: center; border-top: 1px solid var(--soft-border); background: #fafafa; }
+    .social-icons img { width: 20px; margin: 0 12px; opacity: 0.5; }
+    footer p { font-size: 9px; color: #bbb; margin-top: 30px; letter-spacing: 1px; line-height: 2; }
 
     @keyframes slide { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    @keyframes logosSlide { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
     @media (max-width: 768px) {
       .services-grid, .testimonials { grid-template-columns: 1fr; }
+      .brand-info { left: 50%; margin-left: -100px; }
     }
   </style>
 </head>
@@ -181,26 +204,25 @@
   <header>
     <div class="brand-logo">
       <h1>MUG<span class="shopp">SHOPP</span></h1>
-      <span class="brand-tagline">Estúdio de Design & Personalizados</span>
+      <span class="brand-tagline">Estúdio de Design & Curadoria</span>
     </div>
-    <p style="max-width: 600px; margin: 0 auto; font-size: 15px; font-weight: 300; color: var(--text-gray);">Curadoria em projetos exclusivos para marcas que buscam impacto e pessoas que valorizam histórias.</p>
+    <h1 class="main-headline">Excelência em cada detalhe.</h1>
+    <p class="sub-headline">Projetos exclusivos para marcas que buscam impacto e pessoas que valorizam histórias.</p>
   </header>
 
   <div class="container">
-    
     <div class="services-grid">
       <div class="service-card">
         <h2>Experiência Pessoal</h2>
-        <p>A arte de presentear com afeto e design.</p>
+        <p>A arte de presentear com afeto e design autoral.</p>
         <a href="https://wa.me/message/XJOCYNPNDO4DD1" class="btn-minimal">Ver Catálogo</a>
       </div>
       <div class="service-card">
         <h2>Universo Corporativo</h2>
-        <p>Branding de alto padrão para sua marca.</p>
+        <p>Branding de alto padrão para sua marca ou evento.</p>
         <a href="https://mugshopp.github.io/portifolio/" class="btn-minimal">Portfólio B2B</a>
       </div>
     </div>
-
   </div>
 
   <section class="product-highlight">
@@ -234,33 +256,46 @@
     </div>
   </div>
 
-  <section class="cta-section">
-    <h2>Dê vida ao seu próximo projeto</h2>
-    <a href="https://wa.me/message/XJOCYNPNDO4DD1" class="btn-minimal" style="padding: 15px 40px;">Solicitar Orçamento</a>
-  </section>
-
   <section class="brands-section">
     <div class="container">
-      <p class="brands-label">Marcas que confiam em nossa produção</p>
-      <div style="overflow: hidden;">
-        <div class="brands-track">
-            <img src="https://i.postimg.cc/QtQ10dXK/IMG_20260106_143040.png" />
-            <img src="https://i.postimg.cc/HLQrCvfG/images_(1)_(1).png" />
-            <img src="https://i.postimg.cc/d08hKNzw/IMG_20260106_140938.png" />
-            <img src="https://i.postimg.cc/28NMv0by/IMG-20260107-WA0021.png" />
-            <img src="https://i.postimg.cc/mZS79kp2/logo_mazzaropi_C7hn_YVKl.png" />
-            <img src="https://i.postimg.cc/QtQ10dXK/IMG_20260106_143040.png" />
-            <img src="https://i.postimg.cc/HLQrCwfG/images_(1)_(1).png" />
+      <p class="brands-label">Marcas que confiam em nossa curadoria</p>
+      
+      <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 13px; color: var(--text-gray); margin-bottom: 30px; opacity: 0.8;">
+        Toque nos logotipos para conhecer nossa atuação em cada projeto
+      </p>
+
+      <div class="brands-wrapper">
+        <div class="brand-item">
+          <img src="https://i.postimg.cc/QtQ10dXK/IMG_20260106_143040.png" alt="Marfil Marmoraria" />
+          <div class="brand-info"><strong>Marfil Marmoraria:</strong> Desenvolvimento de mousepads e canecas exclusivas para reforço de marca corporativa.</div>
+        </div>
+
+        <div class="brand-item">
+          <img src="https://i.postimg.cc/HLQrCvfG/images_(1)_(1).png" alt="Podcast Aldine Muller" />
+          <div class="brand-info"><strong>Podcast Aldine Muller:</strong> Peças personalizadas para experiência de convidados e cenário em mídia digital.</div>
+        </div>
+
+        <div class="brand-item">
+          <img src="https://i.postimg.cc/d08hKNzw/IMG_20260106_140938.png" alt="Convicção Contabilidade" />
+          <div class="brand-info"><strong>Convicção Contabilidade:</strong> Curadoria anual de brindes premium para fidelização de clientes de alto padrão.</div>
+        </div>
+
+        <div class="brand-item">
+          <img src="https://i.postimg.cc/28NMv0by/IMG-20260107-WA0021.png" alt="Diocese" />
+          <div class="brand-info"><strong>Institucional:</strong> Produção técnica de itens comemorativos para celebrações e eventos da Diocese.</div>
+        </div>
+
+        <div class="brand-item">
+          <img src="https://i.postimg.cc/mZS79kp2/logo_mazzaropi_C7hn_YVKl.png" alt="Hotel Mazzaropi" />
+          <div class="brand-info"><strong>Hotel Mazzaropi:</strong> Gestão de mimos corporativos para celebração de aniversários de colaboradores.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="google-reviews">
-    <a href="https://g.page/r/CS9Wjb4xq5aJEBE/review" target="_blank" style="text-decoration: none;">
-      <img src="https://i.postimg.cc/V6tZJkhv/five-golden-stars-client-excellent-evaluation-after-use-product-service-concept-by-3d-render.png">
-      <p>AVALIAÇÕES GOOGLE</p>
-    </a>
+  <section class="cta-section">
+    <h2>Dê vida ao seu próximo projeto exclusivo</h2>
+    <a href="https://wa.me/message/XJOCYNPNDO4DD1" class="btn-minimal" style="padding: 15px 45px;">Solicitar Orçamento</a>
   </section>
 
   <footer>
@@ -273,11 +308,6 @@
       CNPJ: 64.137.780/0001-07 • TAUBATÉ - SP <br>
       PROJETOS EXCLUSIVOS EXECUTADOS VIA SUBLIMAÇÃO DE ALTA DEFINIÇÃO.
     </p>
-    <div align="center" style="margin-top:20px; opacity: 0.2;">
-      <a title="Contador de Visitas" href="https://megacontador.com.br/" target="_blank" rel="noopener noreferrer">
-        <img src="https://megacontador.com.br/img-ScCnoVZweDyIliz0-3.gif" border="0" alt="Contador de visitas" style="height: 10px;">
-      </a>
-    </div>
   </footer>
 
 </body>
