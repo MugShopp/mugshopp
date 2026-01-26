@@ -57,24 +57,15 @@
       width: 100%;
       box-sizing: border-box;
     }
-    .brand-logo h1 {
-      font-weight: 600;
-      font-size: 26px;
-      letter-spacing: 10px;
-      margin: 0;
-      text-transform: uppercase;
+
+    /* Estilização para o novo logotipo em imagem */
+    .brand-logo img {
+      max-width: 400px;
+      height: auto;
       display: block;
+      margin: 0 auto;
     }
-    .brand-logo .shopp { color: var(--champagne); }
-    .brand-tagline {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      color: var(--black);
-      margin-top: 15px;
-      display: block;
-      font-weight: 400;
-    }
+
     .sub-headline { 
       font-size: 14px; 
       font-weight: 300; 
@@ -249,12 +240,13 @@
       line-height: 2.2;
       text-transform: uppercase;
     }
-    .footer-brand { font-weight: 600; color: var(--black); margin-bottom: 8px; display: block; }
+    .footer-brand-logo img { width: 180px; height: auto; margin-bottom: 10px; display: block; }
 
     @keyframes slide { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
     @media (max-width: 768px) {
       .services-grid, .testimonials { grid-template-columns: 1fr; }
+      .brand-logo img { max-width: 80%; }
     }
   </style>
 </head>
@@ -271,8 +263,7 @@
 
   <header>
     <div class="brand-logo">
-      <h1>MUG<span class="shopp">SHOPP</span></h1>
-      <span class="brand-tagline">Estúdio de Design & Personalizados</span>
+      <img src="https://i.postimg.cc/wxsStnBH/Sem-fundo.png" alt="MUGSHOPP Estúdio de Design">
     </div>
     <p class="sub-headline">Curadoria em projetos exclusivos para marcas que buscam impacto e pessoas que valorizam histórias.</p>
   </header>
@@ -376,7 +367,9 @@
         <a href="https://wa.me/message/XJOCYNPNDO4DD1"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
       </div>
       <div class="footer-legal">
-        <span class="footer-brand">MUGSHOPP • ESTÚDIO DE DESIGN E PERSONALIZADOS</span>
+        <div class="footer-brand-logo">
+          <img src="https://i.postimg.cc/wxsStnBH/Sem-fundo.png" alt="MUGSHOPP Estúdio de Design">
+        </div>
         TAUBATÉ/SP • CNPJ: 64.137.780/0001-07 <br>
         PROJETOS EXCLUSIVOS EXECUTADOS VIA SUBLIMAÇÃO DE ALTA DEFINIÇÃO. <br>
         &copy; 2026 TODOS OS DIREITOS RESERVADOS.
